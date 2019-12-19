@@ -1,0 +1,5166 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "HPE OneSphere API",
+        "description": "HPE OneSphere hybrid cloud management REST API.\n\nFor calls requiring authentication use \/rest\/session to get a token.\n",
+        "termsOfService": "http:\/\/www.hpe.com\/onesphere"
+    },
+    "servers": [
+        "httpsdeic02-hpe.hpeonesphere.com\/rest"
+    ],
+    "paths": {
+        "\/about\/versions": {
+            "get": {
+                "summary": "Get About Versions",
+                "description": "Get supported versions",
+                "operationId": "GetVersions",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/account": {
+            "get": {
+                "summary": "Get Account",
+                "description": "Returns the global account information. **Not implemented**",
+                "operationId": "GetAccount",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            }
+        },
+        "\/appliances": {
+            "get": {
+                "summary": "Get Appliances",
+                "description": "Returns appliances.",
+                "operationId": "GetAppliance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The name of the desired appliance.\nThis parameter may be repeated with multiple appliance names.\n"
+                    },
+                    {
+                        "name": "regionUri",
+                        "in": "query",
+                        "description": "Set of appliances in this region.\n"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Appliances",
+                "description": "Create an appliance.",
+                "operationId": "CreateAppliance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "appliance",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/appliances\/{id}": {
+            "delete": {
+                "summary": "Delete Appliances",
+                "description": "Delete an appliance.\nThis removes the appliance registration and tears down the secure\ncomms link to the on-premise appliance.\nIf zones exist on this appliance, an '409' error will be returned.\nThe zones on this appliance must be removed before the appliance\ndelete request can be accepted.\n",
+                "operationId": "DeleteAppliance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Appliances",
+                "description": "Returns an appliance based on its ID.",
+                "operationId": "GetApplianceById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Appliances",
+                "description": "Update properties of an appliance.",
+                "operationId": "UpdateAppliance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "List of appliance updates."
+                    }
+                ]
+            }
+        },
+        "\/billing-accounts": {
+            "get": {
+                "summary": "Get Billing Accounts",
+                "description": "Returns billing accounts. It requires the **administrator** or **project creator** global role.",
+                "operationId": "FindBillingAccounts",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Billing Accounts",
+                "description": "Creates a new billing account. It requires the **administrator** role.",
+                "operationId": "CreateBillingAccount",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "billing",
+                        "in": "body",
+                        "description": "Add new billing account"
+                    }
+                ]
+            }
+        },
+        "\/billing-accounts\/{id}": {
+            "delete": {
+                "summary": "Delete Billing Accounts",
+                "description": "Deletes a billing account. It requires the **administrator** role.",
+                "operationId": "DeleteBillingAccountById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Billing Accounts",
+                "description": "Returns a billing account based on its id. It requires the **administrator** or **project creator** global role. Credentials are not included.",
+                "operationId": "GetBillingAccountById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Billing Accounts",
+                "description": "Updates a billing account. It requires the **administrator** role.",
+                "operationId": "UpdateBillingAccount",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "List of appliance updates."
+                    }
+                ]
+            }
+        },
+        "\/catalog-types": {
+            "get": {
+                "summary": "Get Catalog Types",
+                "description": "Returns catalog types.",
+                "operationId": "FindCatalogTypes",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/catalogs": {
+            "get": {
+                "summary": "Get Catalogs",
+                "description": "Returns catalogs. It requires the **consumer** global role.",
+                "operationId": "FindCatalogs",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "userQuery",
+                        "in": "query",
+                        "description": "Filters the catalogs returned.\n\nIt performs a case insensitive comparison of the supplied string\nvalue with the **name** property.\n\nFor example: ``userQuery=\"dock\"``\n"
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Catalogs",
+                "description": "Creates a new catalog.",
+                "operationId": "CreateCatalog",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "catalog",
+                        "in": "body",
+                        "description": "Add new catalog"
+                    }
+                ]
+            }
+        },
+        "\/catalogs\/{id}": {
+            "delete": {
+                "summary": "Delete Catalogs",
+                "description": "Delete a catalog and associated resources. **Not implemented**",
+                "operationId": "DeleteCatalog",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Catalogs",
+                "description": "Returns a catalog based on its id. It requires the **consumer** global role.",
+                "operationId": "GetCatalogById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Catalogs",
+                "description": "Patches a catalog. Allowed fields for PATCH of catalogs are name(add,replace), password(add), accessKey(add), secretKey(add), state(add,replace)",
+                "operationId": "UpdateCatalog",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "catalog",
+                        "in": "body",
+                        "description": "Add new catalog"
+                    }
+                ]
+            }
+        },
+        "\/connect-app": {
+            "get": {
+                "summary": "Get Connect App",
+                "description": "Generates connect app s3 url",
+                "operationId": "ConnectApp",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "os",
+                        "in": "query",
+                        "description": "OS type for which compatible connect app URL has to be generated."
+                    }
+                ]
+            }
+        },
+        "\/deployments": {
+            "get": {
+                "summary": "Get Deployments",
+                "description": "Returns deployments. It requires any project role or non-'consumer' global role.",
+                "operationId": "FindDeployments",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    },
+                    {
+                        "name": "userQuery",
+                        "in": "query",
+                        "description": "Filters the catalogs returned.\n\nIt performs a case insensitive comparison of the supplied string\nvalue with the **name** property.\n\nFor example: ``userQuery=\"dock\"``\n"
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Deployments",
+                "description": "Creates a new deployment. It requires any project role, or the **administrator** or **project creator** global role.",
+                "operationId": "CreateDeployment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "deployment",
+                        "in": "body",
+                        "description": "Add new deployment. If regionUri is specified and zoneUri is not specified, the zone that is configured as default will be used. If default zone is not configured then the first valid zone will be used to create the deployment."
+                    }
+                ]
+            }
+        },
+        "\/deployments\/{id}": {
+            "delete": {
+                "summary": "Delete Deployments",
+                "description": "Delete a deployment and associated resources. It requires any project role, or the **administrator** or **project creator** global role.",
+                "operationId": "DeleteDeployment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Deployments",
+                "description": "Returns a deployment based on its id. It requires any project role or non-'consumer' global role.",
+                "operationId": "GetDeploymentById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Deployments",
+                "description": "Updates a deployment. **Requires any project role, or 'administrator' or 'project creator' global role**. Allowed fields for PATCH of deployments are name(add,replace), volumes(add), k8snumWorkers(add), userData(add), serviceInput(add), version(add).",
+                "operationId": "UpdateDeployment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "deployment",
+                        "in": "body",
+                        "description": "Add new deployment. If regionUri is specified and zoneUri is not specified, the zone that is configured as default will be used. If default zone is not configured then the first valid zone will be used to create the deployment."
+                    }
+                ]
+            }
+        },
+        "\/deployments\/{id}\/actions": {
+            "post": {
+                "summary": "Post Deployments Actions",
+                "description": "Peforms an action to change the state of a deployment. It requires any project role, or the **administrator** or **project creator** global role.",
+                "operationId": "ActOnDeployment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "action",
+                        "in": "body",
+                        "description": "Action to perform"
+                    }
+                ]
+            }
+        },
+        "\/deployments\/{id}\/console": {
+            "post": {
+                "summary": "Post Deployments Console",
+                "description": "Returns a deployment console URL for deployment",
+                "operationId": "GetDeploymentConsoleURL",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            }
+        },
+        "\/deployments\/{id}\/kubeconfig": {
+            "get": {
+                "summary": "Get Deployments Kubeconfig",
+                "description": "Returns the kubeconfig. Applicable only to deployments of Kubernetes cluster. **Requires 'consumer' role on workspace**",
+                "operationId": "GetDeploymentKubeConfig",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            }
+        },
+        "\/events": {
+            "get": {
+                "summary": "Get Events",
+                "description": "Returns events based on the supplied criteria. **Not implemented**",
+                "operationId": "FindEvents",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "resourceUri",
+                        "in": "query",
+                        "description": "Resource to prune events by."
+                    }
+                ]
+            }
+        },
+        "\/keypairs": {
+            "get": {
+                "summary": "Get Keypairs",
+                "description": "Get keypairs (per region, per user). Currently a projectUri is required",
+                "operationId": "ListKeypairs",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "regionUri",
+                        "in": "query",
+                        "description": "Set of appliances in this region.\n"
+                    },
+                    {
+                        "name": "projectUri",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/membership-roles": {
+            "get": {
+                "summary": "Get Membership Roles",
+                "description": "Returns membership (project-specific) roles.",
+                "operationId": "ListMembershipRoles",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/memberships": {
+            "delete": {
+                "summary": "Delete Memberships",
+                "description": "Delete a membership. It requires the **administrator** or **project creator** global role or the **project owner** role on the project.",
+                "operationId": "DeleteMember",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "membership",
+                        "in": "body",
+                        "description": "Delete membership"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Memberships",
+                "description": "Returns memberships. Supports filtering by projectUri, userUri, userGroupUri, roleUri (but only\nindividual values, not multiple) in 'query'.\n\nIf projectURI and userUri\/userGroupUri are given a different\nbackend path will be used that should be authorized to a project owner even if they wouldn't ordinarily\nbe able to see other users' roles.\n\nIt requires the **administrator** or **project creator** global role or the **project owner** role on the project.\n**project owner** requires **projectUri** ",
+                "operationId": "FindMembers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Memberships",
+                "description": "Creates a new membership. It requires the **administrator** or **project creator** global role or **project owner** role on the project.",
+                "operationId": "CreateMember",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "membership",
+                        "in": "body",
+                        "description": "Delete membership"
+                    }
+                ]
+            }
+        },
+        "\/metrics": {
+            "get": {
+                "summary": "Get Metrics",
+                "description": "Returns all metrics based on the supplied criteria. It requires the **analyst** role.\nIt requires one and only one of resourceUri or category to be specified.\n",
+                "operationId": "FindMetrics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "resourceUri",
+                        "in": "query",
+                        "description": "Resource to prune events by."
+                    },
+                    {
+                        "name": "category",
+                        "in": "query",
+                        "description": "A category name. Include resources that are in this category. This can be combined with the query property to filter resources. It is invalid to specify this property if a resourceUri property is provided.\n<\/br> **category examples:**\n<\/br> *Get the cost.usage for all providers:*\nGET \/rest\/metrics?\"**category=providers&name=cost.usage**&periodStart=2017-12-01T00:00:00Z&period=month&periodCount=-1&view=full\"\n<\/br> *Get the cost.usage for all projects:*\nGET \/rest\/metrics?\"**category=projects&name="
+                    },
+                    {
+                        "name": "groupBy",
+                        "in": "query",
+                        "description": "A value to group the data by. It is invalid to specify this property if a resourceUri property is provided.\n<\/br> **groupBy examples:**\n<\/br> *Get the cost.total for all providers grouped by provider type:*\nGET \/rest\/metrics?\"**category=providers&name=cost.total&groupBy=providerTypeUri**&periodStart=2017-12-01T00:00:00Z&period=month&periodCount=-2&view=full\"\n<\/br> *Get the cost.usage for all providers grouped by provider type:*\nGET \/rest\/metrics?\"**category=providers&name=cost.usage&groupBy=prov"
+                    },
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The name of the desired appliance.\nThis parameter may be repeated with multiple appliance names.\n"
+                    },
+                    {
+                        "name": "periodStart",
+                        "in": "query",
+                        "description": "When the metric value(s) should be measured from. This must be aligned to the period requested. For instance, if the period is 'hour', this value must be at the top of an hour.\nIf not specified, it will default to the latest time for which the data is expected to be valid, aligned to the period boundary. For costs, this will be the start of the current UTC period. For scores (and score drill down metrics), this will be the previous hour, unless the current UTC time is less than 5 minutes into th"
+                    },
+                    {
+                        "name": "period",
+                        "in": "query",
+                        "description": "How much time to cover per data point. Certain metric names may support only a subset of these options. Scores support a period of 'day' or 'hour'. Costs only support a period of 'month'. Resources support a period of 'day' or 'hour'. 422 or 400 is returned if the metric name is not supported.\n**example:** hour\n"
+                    },
+                    {
+                        "name": "periodCount",
+                        "in": "query",
+                        "description": "How many period data points to return relative to the periodStart time. This value can be positive or negative.  Zero is invalid.\n**default:** 1\n"
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    },
+                    {
+                        "name": "start",
+                        "in": "query",
+                        "description": "Index into the response members to allow pagination. Use in conjunction with the 'count' parameter to paginate through many metrics. **Not Implemented**\n"
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Maximum number of response members to return. Use in conjunction with the 'start' parameter to paginate through many metrics. **Not Implemented**\n"
+                    }
+                ]
+            }
+        },
+        "\/networks": {
+            "get": {
+                "summary": "Get Networks",
+                "description": "Returns networks. It requires any project role or non-'consumer' global role.",
+                "operationId": "FindNetworks",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    }
+                ]
+            }
+        },
+        "\/networks\/{id}": {
+            "get": {
+                "summary": "Get Networks",
+                "description": "Returns a network based on its id. It requires any project role or non-'consumer' global role.",
+                "operationId": "GetNetworkById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Networks",
+                "description": "Updates a network. It requires the **administrator** global role.",
+                "operationId": "ModifyNetwork",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "network",
+                        "in": "body",
+                        "description": "Update network"
+                    }
+                ]
+            }
+        },
+        "\/onboarding\/azure\/properties": {
+            "get": {
+                "summary": "Get Onboarding Azure Properties",
+                "description": "Returns a properties object needed to build the Azure login url",
+                "operationId": "GetAzureLoginProperties",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/onboarding\/azure\/provider-info": {
+            "get": {
+                "summary": "Get Onboarding Azure Prover Info",
+                "description": "Returns the provider information required to add an Azure provider",
+                "operationId": "GetAzureProviderInfo",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "directoryUri",
+                        "in": "query",
+                        "description": "The Azure Directory URI associated with the Subscription\nFor Example:\nmyActiveDirectory.onmicrosoft.com\n"
+                    },
+                    {
+                        "name": "location",
+                        "in": "query",
+                        "description": "The full response Azure sends to the redirectURI including valid Azure authentication code\nFor Example:\nhttps:\/\/customername.hpeonesphere.net\/rest\/azureauth\/?code=1234ABCD&state=5678&session_state=90EF\n"
+                    }
+                ]
+            }
+        },
+        "\/onboarding\/azure\/subscriptions": {
+            "get": {
+                "summary": "Get Onboarding Azure Subscriptions",
+                "description": "Returns a list of Azure subscriptions and their display names",
+                "operationId": "ListAzureSubscriptions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "directoryUri",
+                        "in": "query",
+                        "description": "The Azure Directory URI associated with the Subscription\nFor Example:\nmyActiveDirectory.onmicrosoft.com\n"
+                    },
+                    {
+                        "name": "location",
+                        "in": "query",
+                        "description": "The full response Azure sends to the redirectURI including valid Azure authentication code\nFor Example:\nhttps:\/\/customername.hpeonesphere.net\/rest\/azureauth\/?code=1234ABCD&state=5678&session_state=90EF\n"
+                    }
+                ]
+            }
+        },
+        "\/onboarding\/azure\/subscriptions\/{subscriptionId}": {
+            "patch": {
+                "summary": "Patch Onboarding Azure Subscriptions Subscriptionid",
+                "description": "Updates a subscription",
+                "operationId": "UpdateSubscription",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "subscriptionId",
+                        "in": "path",
+                        "description": "The Azure subscriptionId"
+                    },
+                    {
+                        "name": "directoryUri",
+                        "in": "query",
+                        "description": "The Azure Directory URI associated with the Subscription\nFor Example:\nmyActiveDirectory.onmicrosoft.com\n"
+                    },
+                    {
+                        "name": "location",
+                        "in": "query",
+                        "description": "The full response Azure sends to the redirectURI including valid Azure authentication code\nFor Example:\nhttps:\/\/customername.hpeonesphere.net\/rest\/azureauth\/?code=1234ABCD&state=5678&session_state=90EF\n"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "List of appliance updates."
+                    }
+                ]
+            }
+        },
+        "\/password-reset": {
+            "post": {
+                "summary": "Post Password Reset",
+                "description": "Request a single-use password reset token.",
+                "operationId": "CreatePasswordReset",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "passwordResetRequest",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/password-reset\/change": {
+            "post": {
+                "summary": "Post Password Reset Change",
+                "description": "Process a password reset.",
+                "operationId": "ProcessPasswordReset",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "passwordReset",
+                        "in": "body",
+                        "description": "Password reset information"
+                    }
+                ]
+            }
+        },
+        "\/projects": {
+            "get": {
+                "summary": "Get Projects",
+                "description": "Returns projects. It requires any project role or non-'consumer' global role.",
+                "operationId": "FindProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "userQuery",
+                        "in": "query",
+                        "description": "Filters the catalogs returned.\n\nIt performs a case insensitive comparison of the supplied string\nvalue with the **name** property.\n\nFor example: ``userQuery=\"dock\"``\n"
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Projects",
+                "description": "Creates a new project. It requires the **project-owner** project role, or **administrator** or **project creator** global role.",
+                "operationId": "CreateProject",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "project",
+                        "in": "body",
+                        "description": "Add new project"
+                    }
+                ]
+            }
+        },
+        "\/projects\/{id}": {
+            "delete": {
+                "summary": "Delete Projects",
+                "description": "Deletes a project. If resources (currently Deployments) exist within the project they must first be deleted. In this case, the response will be a 409 Conflict with the body listing the first ten offending items. It requires **administratpor** global role or **owner** project role. **not implemented**\n",
+                "operationId": "DeletesAProjectIfResourcesCurrentlyDeploymentsExistWithinTheProjectTheyMustFirstBeDel",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Projects",
+                "description": "Returns a project based on its id. It requires any project role or non-consumer global role.",
+                "operationId": "GetProjectById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Projects",
+                "description": "Updates a project. It requires the **administrator** global role or the **project owner** role on a project.",
+                "operationId": "UpdateProject",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "project",
+                        "in": "body",
+                        "description": "Add new project"
+                    }
+                ]
+            }
+        },
+        "\/provider-types": {
+            "get": {
+                "summary": "Get Prover Types",
+                "description": "Returns provider types.",
+                "operationId": "FindProviderTypes",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/providers": {
+            "get": {
+                "summary": "Get Provers",
+                "description": "Returns providers. It requires the **consumer** global role.",
+                "operationId": "FindProviders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Provers",
+                "description": "Creates a new Master provider or Member provider.",
+                "operationId": "CreateProvider",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "provider",
+                        "in": "body",
+                        "description": "Add new provider"
+                    }
+                ]
+            }
+        },
+        "\/providers\/{id}": {
+            "delete": {
+                "summary": "Delete Provers",
+                "description": "Deletes a master provider or a child provider",
+                "operationId": "DeleteProviderById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Provers",
+                "description": "Returns a provider based on its id. It requires the **consumer** global role.",
+                "operationId": "GetProviderById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    },
+                    {
+                        "name": "discover",
+                        "in": "query",
+                        "description": "Will return the merged set of regions from AWS and existing regions in Onesphere."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Provers",
+                "description": "Updates a provider.",
+                "operationId": "UpdateProvider",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "List of appliance updates."
+                    }
+                ]
+            }
+        },
+        "\/rates": {
+            "get": {
+                "summary": "Get Rates",
+                "description": "Returns rates. It requires the **administrator** global role.\n\nOptionally this list may be filtered, or the default rates specified with a resourceUri of 'default'.\n",
+                "operationId": "ListRates",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "resourceUri",
+                        "in": "query",
+                        "description": "Resource to prune events by."
+                    },
+                    {
+                        "name": "effectiveForDate",
+                        "in": "query",
+                        "description": "The date for which returned rates need be effective, a special filter that allows a search for a rate that would be effective on a date.  That is, to allow a search for a rate whose effective date is on or before the specified effectiveForDate.\n"
+                    },
+                    {
+                        "name": "effectiveDate",
+                        "in": "query",
+                        "description": "The specific effective date to filter by.\n"
+                    },
+                    {
+                        "name": "metricName",
+                        "in": "query",
+                        "description": "The metric name to filter by.\n"
+                    },
+                    {
+                        "name": "active",
+                        "in": "query",
+                        "description": "Filter for active or inactive rates.\n"
+                    },
+                    {
+                        "name": "start",
+                        "in": "query",
+                        "description": "Index into the response members to allow pagination. Use in conjunction with the 'count' parameter to paginate through many metrics. **Not Implemented**\n"
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Maximum number of response members to return. Use in conjunction with the 'start' parameter to paginate through many metrics. **Not Implemented**\n"
+                    }
+                ]
+            }
+        },
+        "\/rates\/{id}": {
+            "get": {
+                "summary": "Get Rates",
+                "description": "Retrieve a rate by id. It requires the **administrator** global role.",
+                "operationId": "GetRateById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            }
+        },
+        "\/regions": {
+            "get": {
+                "summary": "Get Regions",
+                "description": "Returns regions. It requires the **consumer** global role.",
+                "operationId": "FindRegions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Regions",
+                "description": "Creates a new region.",
+                "operationId": "CreateRegion",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "region",
+                        "in": "body",
+                        "description": "Add new region"
+                    }
+                ]
+            }
+        },
+        "\/regions\/{id}": {
+            "delete": {
+                "summary": "Delete Regions",
+                "description": "Deletes a region",
+                "operationId": "DeleteRegion",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "force",
+                        "in": "query",
+                        "description": "Region may be in an odd state. Force will attempt to delete again no matter the state."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Regions",
+                "description": "Returns a region based on its id. It requires the **consumer** global role.",
+                "operationId": "GetRegionById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    },
+                    {
+                        "name": "discover",
+                        "in": "query",
+                        "description": "Will return the merged set of regions from AWS and existing regions in Onesphere."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Regions",
+                "description": "Patches a region. PATCH only supports provider type(\/rest\/provider-types\/ncs). Allowed fields to PATCH for NCS provider type are (name,location)",
+                "operationId": "PatchRegion",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "List of appliance updates."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Regions",
+                "description": "Updates a region. **Not implemented**",
+                "operationId": "UpdateRegion",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "region",
+                        "in": "body",
+                        "description": "Add new region"
+                    }
+                ]
+            }
+        },
+        "\/regions\/{id}\/connection": {
+            "delete": {
+                "summary": "Delete Regions Connection",
+                "description": "",
+                "operationId": "DeleteRegionConnection",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Regions Connection",
+                "description": "Get region connection.",
+                "operationId": "GetRegionConnection",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Regions Connection",
+                "description": "Creates a new region connection",
+                "operationId": "CreateRegionConnection",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "regionConnection",
+                        "in": "body",
+                        "description": "Add new region connection"
+                    }
+                ]
+            }
+        },
+        "\/regions\/{id}\/connector-image": {
+            "get": {
+                "summary": "Get Regions Connector Image",
+                "description": "Generates connector-image url for the region. It requires the **administrator** role.",
+                "operationId": "GetConnectorImage",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            }
+        },
+        "\/roles": {
+            "get": {
+                "summary": "Get Roles",
+                "description": "Returns global roles.",
+                "operationId": "ListRoles",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/servers": {
+            "get": {
+                "summary": "Get Servers",
+                "description": "Returns servers.",
+                "operationId": "GetServer",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "regionUri",
+                        "in": "query",
+                        "description": "Set of appliances in this region.\n"
+                    },
+                    {
+                        "name": "applianceUri",
+                        "in": "query",
+                        "description": "Set of servers in this appliance.\n"
+                    },
+                    {
+                        "name": "zoneUri",
+                        "in": "query",
+                        "description": "Set of servers in this zone.\n"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Servers",
+                "description": "Create\/Register a server.",
+                "operationId": "CreateServer",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "server",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/servers\/{id}": {
+            "delete": {
+                "summary": "Delete Servers",
+                "description": "Delete a server.\nNote that by default only servers created via the HPE OneSphere API can be\nsubsequently deleted. HPE OneSphere managed servers (those that have\nan applianceUri) cannot be deleted via this operation (a '403' will be returned),\nunless the 'force' parameter is supplied and set to 'true'.\n",
+                "operationId": "DeleteServer",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "force",
+                        "in": "query",
+                        "description": "Region may be in an odd state. Force will attempt to delete again no matter the state."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Servers",
+                "description": "Returns a server based on its ID.",
+                "operationId": "GetServerById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Servers",
+                "description": "Update properties of a server.",
+                "operationId": "UpdateServer",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "List of appliance updates."
+                    }
+                ]
+            }
+        },
+        "\/service-types": {
+            "get": {
+                "summary": "Get Service Types",
+                "description": "Returns all service types. It requires the **consumer** global role.",
+                "operationId": "FindServiceTypes",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/service-types\/{id}": {
+            "get": {
+                "summary": "Get Service Types",
+                "description": "Return a service type based on its id. It requires the **consumer** global role.",
+                "operationId": "GetServiceTypeById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            }
+        },
+        "\/services": {
+            "get": {
+                "summary": "Get Services",
+                "description": "Returns services. It requires any project role or non-'consumer' global role.",
+                "operationId": "FindServices",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    },
+                    {
+                        "name": "userQuery",
+                        "in": "query",
+                        "description": "Filters the catalogs returned.\n\nIt performs a case insensitive comparison of the supplied string\nvalue with the **name** property.\n\nFor example: ``userQuery=\"dock\"``\n"
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            }
+        },
+        "\/services\/{id}": {
+            "get": {
+                "summary": "Get Services",
+                "description": "Returns a service based on its id. It requires any project role or non-'consumer' global role.",
+                "operationId": "GetServiceById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            }
+        },
+        "\/session": {
+            "delete": {
+                "summary": "Delete Session",
+                "description": "Deletes cached data and tokens for the current session.",
+                "operationId": "DeleteSession",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Get Session",
+                "description": "Gets information for the current user.",
+                "operationId": "ReadSession",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Session",
+                "description": "Authenticates a local user and generates an authorization token. This\ntoken should be used in subsequent HTTP requests as part of\nthe \"Authorization\" header. For example:\n\n`Authorization: \"Bearer <token>\"`\n",
+                "operationId": "CreateSession",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "credentials",
+                        "in": "body",
+                        "description": "UserName and Password"
+                    }
+                ]
+            }
+        },
+        "\/session\/idp": {
+            "get": {
+                "summary": "Get Session P",
+                "description": "**Not implemented**\n\nGets the Identity Provider login URL for a userName.\n",
+                "operationId": "ReadSessionIdp",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "userName",
+                        "in": "query",
+                        "description": "User Name of the User for which login context is needed."
+                    }
+                ]
+            }
+        },
+        "\/session\/sso": {
+            "get": {
+                "summary": "Get Session Sso",
+                "description": "Get the redirect URL for a configured SSO provider",
+                "operationId": "GetSSOLogin",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Post Session Sso",
+                "description": "Callback for SSO login",
+                "operationId": "CallbackForSsoLogin",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "The unscoped token"
+                    }
+                ]
+            }
+        },
+        "\/status": {
+            "get": {
+                "summary": "Get Status",
+                "description": "Checks the service is running. It does not require authorization.",
+                "operationId": "ReadStatus",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/tag-keys": {
+            "get": {
+                "summary": "Get Tag Keys",
+                "description": "Lists tag keys.",
+                "operationId": "ListTagKeys",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Tag Keys",
+                "description": "Create a tag key. It requires the **analyst** global role.",
+                "operationId": "CreateTagKey",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "body",
+                        "description": "New tag key"
+                    }
+                ]
+            }
+        },
+        "\/tag-keys\/{id}": {
+            "delete": {
+                "summary": "Delete Tag Keys",
+                "description": "Delete a tag key and associated tags. It requires the **analyst** global role.",
+                "operationId": "DeleteTagKey",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Tag Keys",
+                "description": "Returns a tag key based on its id.",
+                "operationId": "GetTagKeyById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            }
+        },
+        "\/tags": {
+            "get": {
+                "summary": "Get Tags",
+                "description": "Lists tags.",
+                "operationId": "ListTags",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Tags",
+                "description": "Create a tag. It requires the **analyst** global role.",
+                "operationId": "CreateTag",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "body",
+                        "description": "New tag"
+                    }
+                ]
+            }
+        },
+        "\/tags\/{id}": {
+            "delete": {
+                "summary": "Delete Tags",
+                "description": "Delete a tag. It requires the **analyst** global role.",
+                "operationId": "DeleteTag",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Tags",
+                "description": "Returns a tag based on its id. It requires the **consumer** global role.",
+                "operationId": "GetTagById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            }
+        },
+        "\/users": {
+            "get": {
+                "summary": "Get Users",
+                "description": "Returns users.",
+                "operationId": "ListUsers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "userQuery",
+                        "in": "query",
+                        "description": "Filters the catalogs returned.\n\nIt performs a case insensitive comparison of the supplied string\nvalue with the **name** property.\n\nFor example: ``userQuery=\"dock\"``\n"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Users",
+                "description": "Create a user. It requires the **administrator** or **project creator** global role.\n\nThe password should be a minimum of 8 characters long.\n",
+                "operationId": "CreateUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "New user"
+                    }
+                ]
+            }
+        },
+        "\/users\/{id}": {
+            "delete": {
+                "summary": "Delete Users",
+                "description": "Delete a user. It requires the **administrator** or **project creator** global role.",
+                "operationId": "DeleteUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Users",
+                "description": "Returns a user based on its id. It requires the **administrator** or **project creator** global role, or matching user id.",
+                "operationId": "GetUserById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Users",
+                "description": "Update a user. It requires the **administrator** or **project creator** global role or matching user ID.\n\nIf the password is updated it must be a minimum of 8 characters long.\n",
+                "operationId": "UpdateUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "New user"
+                    }
+                ]
+            }
+        },
+        "\/virtual-machine-profiles": {
+            "get": {
+                "summary": "Get Virtual Machine Profiles",
+                "description": "Returns all virtual machine profiles. It requires any project role or non-'consumer' global role.",
+                "operationId": "FindVirtualMachineProfiles",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "zoneUri",
+                        "in": "query",
+                        "description": "Set of servers in this zone.\n"
+                    },
+                    {
+                        "name": "serviceUri",
+                        "in": "query",
+                        "description": "service to filter virtual machine profiles by."
+                    }
+                ]
+            }
+        },
+        "\/virtual-machine-profiles\/{id}": {
+            "get": {
+                "summary": "Get Virtual Machine Profiles",
+                "description": "Returns a virtual machine profile based on its id. It equires any project role or non-'consumer' global role.",
+                "operationId": "GetVirtualMachineProfileById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            }
+        },
+        "\/volumes": {
+            "get": {
+                "summary": "Get Volumes",
+                "description": "Returns volumes. It requires any project role or non-'consumer' global role.",
+                "operationId": "FindVolumes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Volumes",
+                "description": "Creates a new volume. It requires any project role or the **administrator** or **project creator** global role.",
+                "operationId": "CreateVolume",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "volume",
+                        "in": "body",
+                        "description": "Add new volume."
+                    }
+                ]
+            }
+        },
+        "\/volumes\/{id}": {
+            "delete": {
+                "summary": "Delete Volumes",
+                "description": "Delete a volume. It requires any project role or the **administrator** or **project creator** global role.",
+                "operationId": "DeleteVolume",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Volumes",
+                "description": "Returns a volume based on its id. It requires any project role or non-'consumer' global role.",
+                "operationId": "GetVolumeById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Volumes",
+                "description": "Updates a volume. **Requires any project role or 'administrator' or 'project creator' global role**. Allowed fields for PATCH of volumes are name(add,replace), size(add,replace)",
+                "operationId": "UpdateVolume",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "volume",
+                        "in": "body",
+                        "description": "Add new volume."
+                    }
+                ]
+            }
+        },
+        "\/zone-types": {
+            "get": {
+                "summary": "Get Zone Types",
+                "description": "Returns all zone types.",
+                "operationId": "FindZoneTypes",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/zone-types\/{id}\/resource-profiles": {
+            "get": {
+                "summary": "Get Zone Types Resource Profiles",
+                "description": "Returns all available resourceProfile for **vcenter zone type**. It requires the **administrator** role.",
+                "operationId": "FindResourceProfileName",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            }
+        },
+        "\/zones": {
+            "get": {
+                "summary": "Get Zones",
+                "description": "Returns zones.",
+                "operationId": "FindZones",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n"
+                    },
+                    {
+                        "name": "regionUri",
+                        "in": "query",
+                        "description": "Set of appliances in this region.\n"
+                    },
+                    {
+                        "name": "providerUri",
+                        "in": "query",
+                        "description": "The provider URI to prune zones by."
+                    },
+                    {
+                        "name": "applianceUri",
+                        "in": "query",
+                        "description": "Set of servers in this appliance.\n"
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Zones",
+                "description": "Creates a new zone",
+                "operationId": "CreateZone",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "zone",
+                        "in": "body",
+                        "description": "Add new zone"
+                    }
+                ]
+            }
+        },
+        "\/zones\/{id}": {
+            "delete": {
+                "summary": "Delete Zones",
+                "description": "Deletes a zone",
+                "operationId": "DeleteZone",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "force",
+                        "in": "query",
+                        "description": "Region may be in an odd state. Force will attempt to delete again no matter the state."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Zones",
+                "description": "Returns a zone based on its id.",
+                "operationId": "GetZoneById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "view",
+                        "in": "query",
+                        "description": "Whether to return related content."
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Zones",
+                "description": "Updates a zone",
+                "operationId": "UpdateZone",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "zone",
+                        "in": "body",
+                        "description": "Add new zone"
+                    }
+                ]
+            }
+        },
+        "\/zones\/{id}\/actions": {
+            "post": {
+                "summary": "Post Zones Actions",
+                "description": "Peforms an action to the zone. It requires the **administrator** role.",
+                "operationId": "ActOnZone",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "action",
+                        "in": "body",
+                        "description": "Action to perform"
+                    }
+                ]
+            }
+        },
+        "\/zones\/{id}\/appliance-image": {
+            "get": {
+                "summary": "Get Zones Appliance Image",
+                "description": "Generates appliance-image url for the zone",
+                "operationId": "ApplianceImage",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            }
+        },
+        "\/zones\/{id}\/connections": {
+            "get": {
+                "summary": "Get Zones Connections",
+                "description": "Gets the list of connection for the zone. It requires the **administrator** role.",
+                "operationId": "ZoneConnectionInstances",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "uuid",
+                        "in": "query",
+                        "description": "Type to filter connection by."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Zones Connections",
+                "description": "Peforms an action to the zone. It requires the **administrator** role.",
+                "operationId": "RegisterZoneConnection",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "zoneConnection",
+                        "in": "body",
+                        "description": "Create a new connection instance for the zone"
+                    }
+                ]
+            }
+        },
+        "\/zones\/{id}\/connections\/{uuid}": {
+            "delete": {
+                "summary": "Delete Zones Connections Uu",
+                "description": "Deletes a connection instance of the zone",
+                "operationId": "UnregisterZoneConnection",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "uuid",
+                        "in": "path",
+                        "description": "ID of connection"
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Patch Zones Connections Uu",
+                "description": "Updates a connection of the zone.",
+                "operationId": "UpdateZoneConnection",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    },
+                    {
+                        "name": "uuid",
+                        "in": "path",
+                        "description": "ID of connection"
+                    },
+                    {
+                        "name": "zoneConnection",
+                        "in": "body",
+                        "description": "Create a new connection instance for the zone"
+                    }
+                ]
+            }
+        },
+        "\/zones\/{id}\/task-status": {
+            "get": {
+                "summary": "Get Zones Task Status",
+                "description": "Returns the status of the task for the zone",
+                "operationId": "ZoneTaskStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the appliance to delete."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "account": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "events": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "metrics": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "appliance": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "l2networks": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "applianceEndpoint": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "applianceL2Network": {
+                "type": "object",
+                "properties": {
+                    "ethernetNetworkType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "purpose": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vlanId": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "applianceList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "azureLoginProperties": {
+                "type": "object",
+                "properties": {
+                    "authHost": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "authType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "clientId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "prompt": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "resource": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "responseMode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "responseType": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "azureProviderInfo": {
+                "type": "object",
+                "properties": {
+                    "familyName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "givenName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tenantId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uniqueName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "azureSubscription": {
+                "type": "object",
+                "properties": {
+                    "canAdd": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "roles": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "azureSubscriptionList": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "billing-account": {
+                "type": "object",
+                "properties": {
+                    "apiAccessKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "directoryUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "enrollmentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerUris": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "billingAccountList": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "catalog": {
+                "type": "object",
+                "properties": {
+                    "catalogTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "protected": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "serviceTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "servicesCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "catalogList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "catalogType": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "catalogTypeList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "childProvider": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "cluster": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "projectUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "clusterList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createAppliance": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createBillingAccount": {
+                "type": "object",
+                "properties": {
+                    "apiAccessKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "directoryUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "enrollmentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createCatalog": {
+                "type": "object",
+                "properties": {
+                    "accessKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "catalogTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secretKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createDeployment": {
+                "type": "object",
+                "properties": {
+                    "assignExternalIP": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "firewall": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "k8sDeploymentRegion": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "k8sDomainUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "k8sMasterFlavor": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "k8sNumMasters": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "k8sWorkerFlavor": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "k8snumWorkers": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "networks": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "projectUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "publicKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "serviceUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userData": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "virtualMachineProfileUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createProject": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tagUris": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createProvider": {
+                "type": "object",
+                "properties": {
+                    "accessKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "billingAccountUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "directoryUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "familyName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "givenName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "masterUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "paymentProvider": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "s3CostBucket": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secretKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "subscriptionId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tenantId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uniqueName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createRegion": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createRegionConnection": {
+                "type": "object",
+                "properties": {
+                    "endpointUuid": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createServer": {
+                "type": "object",
+                "properties": {
+                    "applianceUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "coreCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "coreSpeedMHz": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cpuModel": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "externalIds": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "memoryGB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "processorCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "projectUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "serverModel": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createSession": {
+                "type": "object",
+                "properties": {
+                    "password": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createTag": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tagKeyUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createTagKey": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createUser": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createVolume": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "projectUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sizeGiB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createZone": {
+                "type": "object",
+                "properties": {
+                    "applianceUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rates": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "createZoneConnection": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uuid": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "datastore": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sizeGiB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "deployment": {
+                "type": "object",
+                "properties": {
+                    "activeUsers": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "clusterUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cpuCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cpuGhz": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "diskSizeGB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "endpoints": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "errorMessage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "events": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "firewall": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "hasConsole": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "keypairUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "memorySizeGB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "projectUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "region": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "service": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "serviceUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "virtualMachineProfileUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "volumeURIs": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "volumes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "deploymentAction": {
+                "type": "object",
+                "properties": {
+                    "force": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "deploymentList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "endpoint": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "addressType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "error": {
+                "type": "object",
+                "properties": {
+                    "canForce": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "details": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "errorCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "errorSource": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "nestedErrors": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "recommendedActions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "esxCluster": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "datastores": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "event": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "resourceUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userId": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "eventList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ipPool": {
+                "type": "object",
+                "properties": {
+                    "endIP": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "purpose": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "startIP": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "keypair": {
+                "type": "object",
+                "properties": {
+                    "fingerprint": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "keypairList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "kvmServer": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "datastores": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "roles": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "serverUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "membership": {
+                "type": "object",
+                "properties": {
+                    "groupUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "membershipRoleUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "projectUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "membershipList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "membershipRole": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "membershipRoleList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "metric": {
+                "type": "object",
+                "properties": {
+                    "associations": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "resource": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "resourceUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "units": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "values": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "metricList": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "network": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "projectUris": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "shared": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "subnets": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vlan": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "networkList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "networkSettings": {
+                "type": "object",
+                "properties": {
+                    "esxManagementNetwork": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ncsManagementNetwork": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "physicalNetworks": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "productionNetwork": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "storageNetwork": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vMotionNetwork": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "passwordReset": {
+                "type": "object",
+                "properties": {
+                    "password": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "token": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "passwordResetRequestInput": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "patchCatalogPatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "patchDeploymentPatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "patchRegionPatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "patchVolumePatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "physicalNetwork": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "networkType": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "project": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "protected": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tagUris": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "projectList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "provider": {
+                "type": "object",
+                "properties": {
+                    "accessKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "billingAccountUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "children": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "directoryUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "familyName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "givenName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "metrics": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "paymentProvider": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "projectUris": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regions": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "s3CostBucket": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "secretKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "subscriptionId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tenantId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uniqueName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "providerList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "providerService": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerServiceTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "providerServiceList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "providerServiceType": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "providerServiceTypeList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "providerType": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "logo": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "metrics": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "providerTypeList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "rate": {
+                "type": "object",
+                "properties": {
+                    "active": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deleted": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "effectiveDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "metricName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rateUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rateValue": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "resourceTerminated": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "resourceUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "unit": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "rateList": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "region": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "metrics": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zones": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "regionConnection": {
+                "type": "object",
+                "properties": {
+                    "endpointUuid": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "regionList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "regionLocation": {
+                "type": "object",
+                "properties": {
+                    "latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "longitude": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "resourceProfile": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "resourceProfileList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "roleList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "server": {
+                "type": "object",
+                "properties": {
+                    "applianceUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "coreCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "coreSpeedMHz": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "cpuModel": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "externalIds": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "memoryGB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "oneViewState": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "powerState": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "processorCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "projectUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "serverModel": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "serverList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "service": {
+                "type": "object",
+                "properties": {
+                    "catalogUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "diskFormat": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "icon": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "minDiskSizeGB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "minMemSizeGB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "osType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "serviceTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sizeMB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "versions": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "virtualSizeMB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "serviceList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "serviceType": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "serviceTypeList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "session": {
+                "type": "object",
+                "properties": {
+                    "token": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "sessionFull": {
+                "type": "object",
+                "properties": {
+                    "token": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "sessionIdp": {
+                "type": "object",
+                "properties": {
+                    "method": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "status": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "subnet": {
+                "type": "object",
+                "properties": {
+                    "cidr": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "dns1": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "dns2": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "gateway": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ipPools": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "tag": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tagKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tagKeyUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "tagKey": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "tagKeyList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "tagList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "taskResource": {
+                "type": "object",
+                "properties": {
+                    "ProgressUpdates": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "associatedResourceInstanceId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "associatedResourceInstanceType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "associatedResourceInstanceUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "childTasks": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "parentId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "percentComplete": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "taskFailed": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uuid": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateAppliancePatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateBillingAccountPatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateDeploymentProperty": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateNetworkPatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateProject": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tagUris": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateProviderPatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateServerPatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateSubscriptionPatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateUser": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateVolume": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sizeGiB": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "updateZonePatch": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "user": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "isLocal": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "userList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "vcenterSettings": {
+                "type": "object",
+                "properties": {
+                    "ipAddress": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "port": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "versions": {
+                "type": "object",
+                "properties": {
+                    "versions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "virtualMachineProfile": {
+                "type": "object",
+                "properties": {
+                    "cpuCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "diskSizeGB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "memorySizeGB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "virtualMachineProfileList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "volume": {
+                "type": "object",
+                "properties": {
+                    "attachedMode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "attachments": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "projectUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sizeGiB": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "volumeAttachment": {
+                "type": "object",
+                "properties": {
+                    "deploymentUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "device": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "volumeList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "zone": {
+                "type": "object",
+                "properties": {
+                    "applianceUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "clusters": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "currentTasks": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "default": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "inTransitClusters": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "inTransitKvmServers": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "kvmServers": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "managed": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "metrics": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "providerUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "regionUri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zoneTypeUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "zone_rate": {
+                "type": "object",
+                "properties": {
+                    "metricName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rateValue": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "zoneAction": {
+                "type": "object",
+                "properties": {
+                    "resourceOps": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "zoneConnection": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uuid": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "zoneConnectionList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "zoneList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "zoneTasks": {
+                "type": "object",
+                "properties": {
+                    "taskName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "taskState": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "taskStatus": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "zoneType": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "zoneTypeList": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
