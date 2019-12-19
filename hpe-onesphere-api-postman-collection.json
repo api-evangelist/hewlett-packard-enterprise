@@ -1,0 +1,4084 @@
+{
+    "id": "8647163cc7010177e899d85d1d8f06f4",
+    "name": "HPE OneSphere API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "4401a6d36d44fa7ed6349d3d10a7f413",
+            "name": "Get About Versions",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/about\/versions",
+            "description": "Get supported versions",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "3ae13a6abe83b6232488a5548f222a36",
+            "name": "Get Account",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/account",
+            "description": "Returns the global account information. **Not implemented**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "40616ccd8c579f955781c5aa528dec2e",
+            "name": "Get Appliances",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/appliances",
+            "description": "Returns appliances.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The name of the desired appliance.\nThis parameter may be repeated with multiple appliance names.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "regionUri",
+                    "description": "Set of appliances in this region.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "120c71799d8a51bb500bb8d5d874838e",
+            "name": "Post Appliances",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/appliances",
+            "description": "Create an appliance.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "appliance",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "a57a1e3645f4701ededc4bfd4e0cef1c",
+            "name": "Delete Appliances",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/appliances\/{id}",
+            "description": "Delete an appliance.\nThis removes the appliance registration and tears down the secure\ncomms link to the on-premise appliance.\nIf zones exist on this appliance, an '409' error will be returned.\nThe zones on this appliance must be removed before the appliance\ndelete request can be accepted.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "80fef2de335a5b27dff34c7e4079a140",
+            "name": "Get Appliances",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/appliances\/{id}",
+            "description": "Returns an appliance based on its ID.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "cfed38bc21cddc108bf0bc2b29588a4f",
+            "name": "Patch Appliances",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/appliances\/{id}",
+            "description": "Update properties of an appliance.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "List of appliance updates.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "082b4b04a85a225243b5e2bb634d4d4e",
+            "name": "Get Billing Accounts",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/billing-accounts",
+            "description": "Returns billing accounts. It requires the **administrator** or **project creator** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "2b7fd68547b0dc2ee44f178fceebca89",
+            "name": "Post Billing Accounts",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/billing-accounts",
+            "description": "Creates a new billing account. It requires the **administrator** role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "billing",
+                    "description": "Add new billing account",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "2eefb04edefeeeeea7f105a15fe6ce90",
+            "name": "Delete Billing Accounts",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/billing-accounts\/{id}",
+            "description": "Deletes a billing account. It requires the **administrator** role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "66cd14c2f8d45356973722a99a21bda5",
+            "name": "Get Billing Accounts",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/billing-accounts\/{id}",
+            "description": "Returns a billing account based on its id. It requires the **administrator** or **project creator** global role. Credentials are not included.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "d7739e0354da1727894b1ff0b97c2e34",
+            "name": "Patch Billing Accounts",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/billing-accounts\/{id}",
+            "description": "Updates a billing account. It requires the **administrator** role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "List of appliance updates.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "9a309e29e78ade98bdcf04b01e109ae4",
+            "name": "Get Catalog Types",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalog-types",
+            "description": "Returns catalog types.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "159cd48ec9b2bd1c5d17c853424dfdbb",
+            "name": "Get Catalogs",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalogs",
+            "description": "Returns catalogs. It requires the **consumer** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "userQuery",
+                    "description": "Filters the catalogs returned.\n\nIt performs a case insensitive comparison of the supplied string\nvalue with the **name** property.\n\nFor example: ``userQuery=\"dock\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "2a81e165244d6b08f5af7293f8a0ae12",
+            "name": "Post Catalogs",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalogs",
+            "description": "Creates a new catalog.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "catalog",
+                    "description": "Add new catalog",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "92c911e17ee1e680feafdb79aaba9571",
+            "name": "Delete Catalogs",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalogs\/{id}",
+            "description": "Delete a catalog and associated resources. **Not implemented**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "a5885ea8afb94dc8c757fd6579acba07",
+            "name": "Get Catalogs",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalogs\/{id}",
+            "description": "Returns a catalog based on its id. It requires the **consumer** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "3dd6b369cf85743b0e17c0e5b8fb9818",
+            "name": "Patch Catalogs",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalogs\/{id}",
+            "description": "Patches a catalog. Allowed fields for PATCH of catalogs are name(add,replace), password(add), accessKey(add), secretKey(add), state(add,replace)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "catalog",
+                    "description": "Add new catalog",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "0b92403368129ae4b2bb5eed20bf9428",
+            "name": "Get Connect App",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/connect-app",
+            "description": "Generates connect app s3 url",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "os",
+                    "description": "OS type for which compatible connect app URL has to be generated.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "d7214b51c022444287faf99419b2f09c",
+            "name": "Get Deployments",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments",
+            "description": "Returns deployments. It requires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "userQuery",
+                    "description": "Filters the catalogs returned.\n\nIt performs a case insensitive comparison of the supplied string\nvalue with the **name** property.\n\nFor example: ``userQuery=\"dock\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "0347432d3e0637ccb75b83c8df7deb4d",
+            "name": "Post Deployments",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments",
+            "description": "Creates a new deployment. It requires any project role, or the **administrator** or **project creator** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "deployment",
+                    "description": "Add new deployment. If regionUri is specified and zoneUri is not specified, the zone that is configured as default will be used. If default zone is not configured then the first valid zone will be used to create the deployment.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "49e72e6ebaf2b5856e96b3e800fc894f",
+            "name": "Delete Deployments",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}",
+            "description": "Delete a deployment and associated resources. It requires any project role, or the **administrator** or **project creator** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "a74b799f79c9a3273322f7696160dc97",
+            "name": "Get Deployments",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}",
+            "description": "Returns a deployment based on its id. It requires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "6ef9f7e9f84224fada99fd6ed3cca376",
+            "name": "Patch Deployments",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}",
+            "description": "Updates a deployment. **Requires any project role, or 'administrator' or 'project creator' global role**. Allowed fields for PATCH of deployments are name(add,replace), volumes(add), k8snumWorkers(add), userData(add), serviceInput(add), version(add).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "deployment",
+                    "description": "Add new deployment. If regionUri is specified and zoneUri is not specified, the zone that is configured as default will be used. If default zone is not configured then the first valid zone will be used to create the deployment.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "fa38f230b88d980e0da76d0d00861814",
+            "name": "Post Deployments Actions",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}\/actions",
+            "description": "Peforms an action to change the state of a deployment. It requires any project role, or the **administrator** or **project creator** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "action",
+                    "description": "Action to perform",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "27c3e2422e0f0cc563b0c44839faff85",
+            "name": "Post Deployments Console",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}\/console",
+            "description": "Returns a deployment console URL for deployment",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "67c62aa774b0654a81fc2c317512b8f3",
+            "name": "Get Deployments Kubeconfig",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}\/kubeconfig",
+            "description": "Returns the kubeconfig. Applicable only to deployments of Kubernetes cluster. **Requires 'consumer' role on workspace**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "8c8fbf7e7ce40d4e83ab69ed3c8d3925",
+            "name": "Get Events",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/events",
+            "description": "Returns events based on the supplied criteria. **Not implemented**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "resourceUri",
+                    "description": "Resource to prune events by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "03ed32e02eb9731618e7406a3ea96e7c",
+            "name": "Get Keypairs",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/keypairs",
+            "description": "Get keypairs (per region, per user). Currently a projectUri is required",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "regionUri",
+                    "description": "Set of appliances in this region.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "projectUri",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "02d55c3b7111e2d3b990765118302d1d",
+            "name": "Get Membership Roles",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/membership-roles",
+            "description": "Returns membership (project-specific) roles.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "0cc91c81c86f3712d7b5df9ffd2d310b",
+            "name": "Delete Memberships",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/memberships",
+            "description": "Delete a membership. It requires the **administrator** or **project creator** global role or the **project owner** role on the project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "membership",
+                    "description": "Delete membership",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "c87f65733f07b7f25fe3ccf7383e23a7",
+            "name": "Get Memberships",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/memberships",
+            "description": "Returns memberships. Supports filtering by projectUri, userUri, userGroupUri, roleUri (but only\nindividual values, not multiple) in 'query'.\n\nIf projectURI and userUri\/userGroupUri are given a different\nbackend path will be used that should be authorized to a project owner even if they wouldn't ordinarily\nbe able to see other users' roles.\n\nIt requires the **administrator** or **project creator** global role or the **project owner** role on the project.\n**project owner** requires **projectUri** ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "51e6406ae8c79d971efd7aeaac0c4fac",
+            "name": "Post Memberships",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/memberships",
+            "description": "Creates a new membership. It requires the **administrator** or **project creator** global role or **project owner** role on the project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "membership",
+                    "description": "Delete membership",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "8ccd2febbcd8d3f6be19a2b435871de1",
+            "name": "Get Metrics",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/metrics",
+            "description": "Returns all metrics based on the supplied criteria. It requires the **analyst** role.\nIt requires one and only one of resourceUri or category to be specified.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "resourceUri",
+                    "description": "Resource to prune events by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "category",
+                    "description": "A category name. Include resources that are in this category. This can be combined with the query property to filter resources. It is invalid to specify this property if a resourceUri property is provided.\n<\/br> **category examples:**\n<\/br> *Get the cost.usage for all providers:*\nGET \/rest\/metrics?\"**category=providers&name=cost.usage**&periodStart=2017-12-01T00:00:00Z&period=month&periodCount=-1&view=full\"\n<\/br> *Get the cost.usage for all projects:*\nGET \/rest\/metrics?\"**category=projects&name=",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "groupBy",
+                    "description": "A value to group the data by. It is invalid to specify this property if a resourceUri property is provided.\n<\/br> **groupBy examples:**\n<\/br> *Get the cost.total for all providers grouped by provider type:*\nGET \/rest\/metrics?\"**category=providers&name=cost.total&groupBy=providerTypeUri**&periodStart=2017-12-01T00:00:00Z&period=month&periodCount=-2&view=full\"\n<\/br> *Get the cost.usage for all providers grouped by provider type:*\nGET \/rest\/metrics?\"**category=providers&name=cost.usage&groupBy=prov",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "The name of the desired appliance.\nThis parameter may be repeated with multiple appliance names.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "periodStart",
+                    "description": "When the metric value(s) should be measured from. This must be aligned to the period requested. For instance, if the period is 'hour', this value must be at the top of an hour.\nIf not specified, it will default to the latest time for which the data is expected to be valid, aligned to the period boundary. For costs, this will be the start of the current UTC period. For scores (and score drill down metrics), this will be the previous hour, unless the current UTC time is less than 5 minutes into th",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "period",
+                    "description": "How much time to cover per data point. Certain metric names may support only a subset of these options. Scores support a period of 'day' or 'hour'. Costs only support a period of 'month'. Resources support a period of 'day' or 'hour'. 422 or 400 is returned if the metric name is not supported.\n**example:** hour\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "periodCount",
+                    "description": "How many period data points to return relative to the periodStart time. This value can be positive or negative.  Zero is invalid.\n**default:** 1\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start",
+                    "description": "Index into the response members to allow pagination. Use in conjunction with the 'count' parameter to paginate through many metrics. **Not Implemented**\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "count",
+                    "description": "Maximum number of response members to return. Use in conjunction with the 'start' parameter to paginate through many metrics. **Not Implemented**\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "ceac08bd9cd2d5722d31211061732f7f",
+            "name": "Get Networks",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/networks",
+            "description": "Returns networks. It requires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "25253c83b4f1d475605fae129ffd3b83",
+            "name": "Get Networks",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/networks\/{id}",
+            "description": "Returns a network based on its id. It requires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "02c5c2089c86e54c2f1caf4fb06fdd19",
+            "name": "Patch Networks",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/networks\/{id}",
+            "description": "Updates a network. It requires the **administrator** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "network",
+                    "description": "Update network",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "8da9fc3fe59e7e2b791f40a420a57e76",
+            "name": "Get Onboarding Azure Properties",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/onboarding\/azure\/properties",
+            "description": "Returns a properties object needed to build the Azure login url",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "fab629f7f53d6de04ed969a01c09be45",
+            "name": "Get Onboarding Azure Prover Info",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/onboarding\/azure\/provider-info",
+            "description": "Returns the provider information required to add an Azure provider",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "directoryUri",
+                    "description": "The Azure Directory URI associated with the Subscription\nFor Example:\nmyActiveDirectory.onmicrosoft.com\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "location",
+                    "description": "The full response Azure sends to the redirectURI including valid Azure authentication code\nFor Example:\nhttps:\/\/customername.hpeonesphere.net\/rest\/azureauth\/?code=1234ABCD&state=5678&session_state=90EF\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "a425dfbfc7a61c18134d7f67a8f83f8b",
+            "name": "Get Onboarding Azure Subscriptions",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/onboarding\/azure\/subscriptions",
+            "description": "Returns a list of Azure subscriptions and their display names",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "directoryUri",
+                    "description": "The Azure Directory URI associated with the Subscription\nFor Example:\nmyActiveDirectory.onmicrosoft.com\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "location",
+                    "description": "The full response Azure sends to the redirectURI including valid Azure authentication code\nFor Example:\nhttps:\/\/customername.hpeonesphere.net\/rest\/azureauth\/?code=1234ABCD&state=5678&session_state=90EF\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "57a570050e230cb0b3fe9214fa94d9d0",
+            "name": "Patch Onboarding Azure Subscriptions Subscriptionid",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/onboarding\/azure\/subscriptions\/{subscriptionId}",
+            "description": "Updates a subscription",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "subscriptionId",
+                    "description": "The Azure subscriptionId",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "directoryUri",
+                    "description": "The Azure Directory URI associated with the Subscription\nFor Example:\nmyActiveDirectory.onmicrosoft.com\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "location",
+                    "description": "The full response Azure sends to the redirectURI including valid Azure authentication code\nFor Example:\nhttps:\/\/customername.hpeonesphere.net\/rest\/azureauth\/?code=1234ABCD&state=5678&session_state=90EF\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "List of appliance updates.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "3dfcd87f84395f5bd0a9393b68962de4",
+            "name": "Post Password Reset",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/password-reset",
+            "description": "Request a single-use password reset token.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "passwordResetRequest",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "bebd295e85b5c019944f7b1a21cfc2be",
+            "name": "Post Password Reset Change",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/password-reset\/change",
+            "description": "Process a password reset.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "passwordReset",
+                    "description": "Password reset information",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "918057c7529528306309b1743c2fefae",
+            "name": "Get Projects",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/projects",
+            "description": "Returns projects. It requires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "userQuery",
+                    "description": "Filters the catalogs returned.\n\nIt performs a case insensitive comparison of the supplied string\nvalue with the **name** property.\n\nFor example: ``userQuery=\"dock\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "dfd476046110757e8a89a6596403a533",
+            "name": "Post Projects",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/projects",
+            "description": "Creates a new project. It requires the **project-owner** project role, or **administrator** or **project creator** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "project",
+                    "description": "Add new project",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "ec84750e722d48c3745bb7b5ccfb9348",
+            "name": "Delete Projects",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/projects\/{id}",
+            "description": "Deletes a project. If resources (currently Deployments) exist within the project they must first be deleted. In this case, the response will be a 409 Conflict with the body listing the first ten offending items. It requires **administratpor** global role or **owner** project role. **not implemented**\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "ce1b036f4504a5cc536347bfdd29e580",
+            "name": "Get Projects",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/projects\/{id}",
+            "description": "Returns a project based on its id. It requires any project role or non-consumer global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "1865894afc542f6afbf033e12e304fa3",
+            "name": "Patch Projects",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/projects\/{id}",
+            "description": "Updates a project. It requires the **administrator** global role or the **project owner** role on a project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "project",
+                    "description": "Add new project",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "a88daedefddf092e42e7eb9d5bd7c070",
+            "name": "Get Prover Types",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/provider-types",
+            "description": "Returns provider types.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "79b1f1e97d079b4e32018318fe296000",
+            "name": "Get Provers",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/providers",
+            "description": "Returns providers. It requires the **consumer** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "95450ac08bee9771e35357fd9edde7d4",
+            "name": "Post Provers",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/providers",
+            "description": "Creates a new Master provider or Member provider.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "provider",
+                    "description": "Add new provider",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "d4c75f5fdba19c920be1f57b40058a3a",
+            "name": "Delete Provers",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/providers\/{id}",
+            "description": "Deletes a master provider or a child provider",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "c6dfca73f0674740cf12f7b768c483ab",
+            "name": "Get Provers",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/providers\/{id}",
+            "description": "Returns a provider based on its id. It requires the **consumer** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "discover",
+                    "description": "Will return the merged set of regions from AWS and existing regions in Onesphere.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "92a9df01a2c0279e249274b6857bf1ac",
+            "name": "Patch Provers",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/providers\/{id}",
+            "description": "Updates a provider.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "List of appliance updates.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "c2255d94c47d855586824485eac3bdb5",
+            "name": "Get Rates",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/rates",
+            "description": "Returns rates. It requires the **administrator** global role.\n\nOptionally this list may be filtered, or the default rates specified with a resourceUri of 'default'.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "resourceUri",
+                    "description": "Resource to prune events by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "effectiveForDate",
+                    "description": "The date for which returned rates need be effective, a special filter that allows a search for a rate that would be effective on a date.  That is, to allow a search for a rate whose effective date is on or before the specified effectiveForDate.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "effectiveDate",
+                    "description": "The specific effective date to filter by.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "metricName",
+                    "description": "The metric name to filter by.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "active",
+                    "description": "Filter for active or inactive rates.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start",
+                    "description": "Index into the response members to allow pagination. Use in conjunction with the 'count' parameter to paginate through many metrics. **Not Implemented**\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "count",
+                    "description": "Maximum number of response members to return. Use in conjunction with the 'start' parameter to paginate through many metrics. **Not Implemented**\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "21ccc97ff872c1d5752fa5bb2f30766e",
+            "name": "Get Rates",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/rates\/{id}",
+            "description": "Retrieve a rate by id. It requires the **administrator** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "68f4f579001d6c12bb321aebf0c00b6b",
+            "name": "Get Regions",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions",
+            "description": "Returns regions. It requires the **consumer** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "5613ba6cea020b155223ec9f561a65d1",
+            "name": "Post Regions",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions",
+            "description": "Creates a new region.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "region",
+                    "description": "Add new region",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "f080cf1f33d5b35740b68298d8c0e6b3",
+            "name": "Delete Regions",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}",
+            "description": "Deletes a region",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "force",
+                    "description": "Region may be in an odd state. Force will attempt to delete again no matter the state.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "e29db44ba5eff2bea159073f286f0902",
+            "name": "Get Regions",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}",
+            "description": "Returns a region based on its id. It requires the **consumer** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "discover",
+                    "description": "Will return the merged set of regions from AWS and existing regions in Onesphere.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "db173b6485ee4b53af4452fb5d0f8561",
+            "name": "Patch Regions",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}",
+            "description": "Patches a region. PATCH only supports provider type(\/rest\/provider-types\/ncs). Allowed fields to PATCH for NCS provider type are (name,location)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "List of appliance updates.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "91b563522337243213ba6159b9a6bdcb",
+            "name": "Put Regions",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}",
+            "description": "Updates a region. **Not implemented**",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "region",
+                    "description": "Add new region",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "12e6b030e1cc71935ebc166ea0d5e71a",
+            "name": "Delete Regions Connection",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}\/connection",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "d740e1deab48ee2c5ed5c299ceecab5b",
+            "name": "Get Regions Connection",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}\/connection",
+            "description": "Get region connection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "6343426d47ac4979813a298fe5203654",
+            "name": "Post Regions Connection",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}\/connection",
+            "description": "Creates a new region connection",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "regionConnection",
+                    "description": "Add new region connection",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "44547af772fbf74f9ca1364b9b4b84f9",
+            "name": "Get Regions Connector Image",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}\/connector-image",
+            "description": "Generates connector-image url for the region. It requires the **administrator** role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "83d3c7503da19843d39aae5e214ef062",
+            "name": "Get Roles",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/roles",
+            "description": "Returns global roles.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "6206991f29e2f68db8012cb5212ddffe",
+            "name": "Get Servers",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/servers",
+            "description": "Returns servers.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "regionUri",
+                    "description": "Set of appliances in this region.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "applianceUri",
+                    "description": "Set of servers in this appliance.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "zoneUri",
+                    "description": "Set of servers in this zone.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "1a0e7fce052666a7e240425c41791756",
+            "name": "Post Servers",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/servers",
+            "description": "Create\/Register a server.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "server",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "99a50582044050fa7e811dfd0618797c",
+            "name": "Delete Servers",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/servers\/{id}",
+            "description": "Delete a server.\nNote that by default only servers created via the HPE OneSphere API can be\nsubsequently deleted. HPE OneSphere managed servers (those that have\nan applianceUri) cannot be deleted via this operation (a '403' will be returned),\nunless the 'force' parameter is supplied and set to 'true'.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "force",
+                    "description": "Region may be in an odd state. Force will attempt to delete again no matter the state.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "75ef521ab9a8b3e5afbab1eb022f1452",
+            "name": "Get Servers",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/servers\/{id}",
+            "description": "Returns a server based on its ID.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "80e1cf49e624e10ef2de6d918c6665b7",
+            "name": "Patch Servers",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/servers\/{id}",
+            "description": "Update properties of a server.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "List of appliance updates.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "974feea2cb8b14c2f3d48b00b402d252",
+            "name": "Get Service Types",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/service-types",
+            "description": "Returns all service types. It requires the **consumer** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "1e1b8078dfe043bc156de9081abe8a22",
+            "name": "Get Service Types",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/service-types\/{id}",
+            "description": "Return a service type based on its id. It requires the **consumer** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "2fd4f375a71af6d8d011d448a382a069",
+            "name": "Get Services",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/services",
+            "description": "Returns services. It requires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "userQuery",
+                    "description": "Filters the catalogs returned.\n\nIt performs a case insensitive comparison of the supplied string\nvalue with the **name** property.\n\nFor example: ``userQuery=\"dock\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "18784e71db861eee54ccbb6a828d855d",
+            "name": "Get Services",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/services\/{id}",
+            "description": "Returns a service based on its id. It requires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "10821bde4b09ee30560e23b272d2d620",
+            "name": "Delete Session",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session",
+            "description": "Deletes cached data and tokens for the current session.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "e67abebce68d46c48978c7a392cabd0c",
+            "name": "Get Session",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session",
+            "description": "Gets information for the current user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "cc7f64294657fcca1ea4f07fcba25d9a",
+            "name": "Post Session",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session",
+            "description": "Authenticates a local user and generates an authorization token. This\ntoken should be used in subsequent HTTP requests as part of\nthe \"Authorization\" header. For example:\n\n`Authorization: \"Bearer <token>\"`\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "credentials",
+                    "description": "UserName and Password",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "2d1175740f4a651a5a0d8f0ad8fb2716",
+            "name": "Get Session P",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session\/idp",
+            "description": "**Not implemented**\n\nGets the Identity Provider login URL for a userName.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "userName",
+                    "description": "User Name of the User for which login context is needed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "1bd9949b88ed37f8a42cee0f619e5c9c",
+            "name": "Get Session Sso",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session\/sso",
+            "description": "Get the redirect URL for a configured SSO provider",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "f3b7ac17d7f899a675350b06f3ca3cda",
+            "name": "Post Session Sso",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session\/sso",
+            "description": "Callback for SSO login",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "token",
+                    "description": "The unscoped token",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "5cfe770a730690721a0588ea5dd20c7f",
+            "name": "Get Status",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/status",
+            "description": "Checks the service is running. It does not require authorization.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "2462ca394b7ed732f6dd404f860fddc4",
+            "name": "Get Tag Keys",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tag-keys",
+            "description": "Lists tag keys.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "4ff866ea4d565856bdd4b1222561b8cb",
+            "name": "Post Tag Keys",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tag-keys",
+            "description": "Create a tag key. It requires the **analyst** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "New tag key",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "665ccb4bc9fba6ff84099876b3f70db2",
+            "name": "Delete Tag Keys",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tag-keys\/{id}",
+            "description": "Delete a tag key and associated tags. It requires the **analyst** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "69d1d94a4b664ae667561d27d90dcebc",
+            "name": "Get Tag Keys",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tag-keys\/{id}",
+            "description": "Returns a tag key based on its id.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "f4208ef9fdb61d93dbc6c787ac1ff0d6",
+            "name": "Get Tags",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tags",
+            "description": "Lists tags.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "5f94ba13a3e8e372c6910124c4fb7c66",
+            "name": "Post Tags",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tags",
+            "description": "Create a tag. It requires the **analyst** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "New tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "85971caff152ff6f3937d4776c8dbca1",
+            "name": "Delete Tags",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tags\/{id}",
+            "description": "Delete a tag. It requires the **analyst** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "9bc3c70b369ca31a7b09365d37a4b7f2",
+            "name": "Get Tags",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tags\/{id}",
+            "description": "Returns a tag based on its id. It requires the **consumer** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "ef4d41ad5efd5d19b610b9b65b2c7bcc",
+            "name": "Get Users",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/users",
+            "description": "Returns users.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "userQuery",
+                    "description": "Filters the catalogs returned.\n\nIt performs a case insensitive comparison of the supplied string\nvalue with the **name** property.\n\nFor example: ``userQuery=\"dock\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "4dacae98489d154a26f391954bbcb3f0",
+            "name": "Post Users",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/users",
+            "description": "Create a user. It requires the **administrator** or **project creator** global role.\n\nThe password should be a minimum of 8 characters long.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "New user",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "906de24efa1c952b9d13aa3e8fcb7d7c",
+            "name": "Delete Users",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/users\/{id}",
+            "description": "Delete a user. It requires the **administrator** or **project creator** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "ebf643734c578d06820a1874c92834e4",
+            "name": "Get Users",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/users\/{id}",
+            "description": "Returns a user based on its id. It requires the **administrator** or **project creator** global role, or matching user id.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "ed987826becf48f20c484d981df0f1d1",
+            "name": "Patch Users",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/users\/{id}",
+            "description": "Update a user. It requires the **administrator** or **project creator** global role or matching user ID.\n\nIf the password is updated it must be a minimum of 8 characters long.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user",
+                    "description": "New user",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "5b3d020566608b098aabc632765e4bdb",
+            "name": "Get Virtual Machine Profiles",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/virtual-machine-profiles",
+            "description": "Returns all virtual machine profiles. It requires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "zoneUri",
+                    "description": "Set of servers in this zone.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "serviceUri",
+                    "description": "service to filter virtual machine profiles by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "f05a2a6f6a4dab248028b059af187c38",
+            "name": "Get Virtual Machine Profiles",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/virtual-machine-profiles\/{id}",
+            "description": "Returns a virtual machine profile based on its id. It equires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "94dc2349bf8e01160f234b63bf27111f",
+            "name": "Get Volumes",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/volumes",
+            "description": "Returns volumes. It requires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "cf7624f541f6724d529d375c9dabef1a",
+            "name": "Post Volumes",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/volumes",
+            "description": "Creates a new volume. It requires any project role or the **administrator** or **project creator** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "volume",
+                    "description": "Add new volume.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "75cc9281c1697399b4c7ae1a95f2654f",
+            "name": "Delete Volumes",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/volumes\/{id}",
+            "description": "Delete a volume. It requires any project role or the **administrator** or **project creator** global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "c54196593856bb6cfd81131cb5a026aa",
+            "name": "Get Volumes",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/volumes\/{id}",
+            "description": "Returns a volume based on its id. It requires any project role or non-'consumer' global role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "124bb8d526dfed8f370b25b889c4b816",
+            "name": "Patch Volumes",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/volumes\/{id}",
+            "description": "Updates a volume. **Requires any project role or 'administrator' or 'project creator' global role**. Allowed fields for PATCH of volumes are name(add,replace), size(add,replace)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "volume",
+                    "description": "Add new volume.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "ad4b68e2f314b1a2a746724020228405",
+            "name": "Get Zone Types",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zone-types",
+            "description": "Returns all zone types.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "15a10b2e144323c1261964b1fbce4e98",
+            "name": "Get Zone Types Resource Profiles",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zone-types\/{id}\/resource-profiles",
+            "description": "Returns all available resourceProfile for **vcenter zone type**. It requires the **administrator** role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "6ba1d594c1c14475592f3490edee9c91",
+            "name": "Get Zones",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones",
+            "description": "Returns zones.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "Filters the billing accounts returned.\n\nIt supports equality\ncomparison against one or more properties using a\n``\"name EQ value\"`` syntax. Multiple comparisons can be combined\nusing a ``\"name1 EQ value1 AND name2 EQ value2\"`` syntax.\n\nIt supports comparison of **providerTypeUri** and **name**.\n\nFor example: ``query=\"providerTypeUri EQ \/rest\/provider-types\/azure\"``\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "regionUri",
+                    "description": "Set of appliances in this region.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "providerUri",
+                    "description": "The provider URI to prune zones by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "applianceUri",
+                    "description": "Set of servers in this appliance.\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "d4050c0841929759b92f860f0f24a047",
+            "name": "Post Zones",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones",
+            "description": "Creates a new zone",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "zone",
+                    "description": "Add new zone",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "6a3da205da39eb03360175189ccb7205",
+            "name": "Delete Zones",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}",
+            "description": "Deletes a zone",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "force",
+                    "description": "Region may be in an odd state. Force will attempt to delete again no matter the state.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "43de3ec2c1c1e46563d0f2cfa0a8b9d5",
+            "name": "Get Zones",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}",
+            "description": "Returns a zone based on its id.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "view",
+                    "description": "Whether to return related content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "4a73ac5cd49aea441c7659c8457e0677",
+            "name": "Patch Zones",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}",
+            "description": "Updates a zone",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "zone",
+                    "description": "Add new zone",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "ead02713c0d3715fe6f71a29f06ae158",
+            "name": "Post Zones Actions",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/actions",
+            "description": "Peforms an action to the zone. It requires the **administrator** role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "action",
+                    "description": "Action to perform",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "414eebfdfdf21f6da207bd492b23cebc",
+            "name": "Get Zones Appliance Image",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/appliance-image",
+            "description": "Generates appliance-image url for the zone",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "4c41c3dc41add0a995c762afe648020c",
+            "name": "Get Zones Connections",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/connections",
+            "description": "Gets the list of connection for the zone. It requires the **administrator** role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "uuid",
+                    "description": "Type to filter connection by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "5b292955a841e08ece7f5be308ca9da9",
+            "name": "Post Zones Connections",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/connections",
+            "description": "Peforms an action to the zone. It requires the **administrator** role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "zoneConnection",
+                    "description": "Create a new connection instance for the zone",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "c2ee954fd98a26f3f8d04959310b1cc6",
+            "name": "Delete Zones Connections Uu",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/connections\/{uuid}",
+            "description": "Deletes a connection instance of the zone",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "uuid",
+                    "description": "ID of connection",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "ff39623c5c98ea324c65eec9a4f0a43f",
+            "name": "Patch Zones Connections Uu",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/connections\/{uuid}",
+            "description": "Updates a connection of the zone.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "uuid",
+                    "description": "ID of connection",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "zoneConnection",
+                    "description": "Create a new connection instance for the zone",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        },
+        {
+            "id": "2ba8b087471438924c4f47b8e951cb85",
+            "name": "Get Zones Task Status",
+            "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/task-status",
+            "description": "Returns the status of the task for the zone",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the appliance to delete.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "rawModeData": ""
+        }
+    ]
+}
