@@ -1,0 +1,79 @@
+{
+    "name": "Hewlett Packard Enterprise",
+    "description": "Hewlett Packard Enterprise Company is an American multinational enterprise information technology company based in Palo Alto, California, founded on 1 November 2015 as part of splitting of the Hewlett-Packard company.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/20313-hewlett-packard-enterprise-(hpe).jpg",
+    "tags": [
+        "cloud",
+        "have api",
+        "isp",
+        "relative data",
+        "service api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/hewlett-packard-enterprise\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "HPE OneSphere API",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/20313-hewlett-packard-enterprise-(hpe).jpg",
+            "humanURL": "http:\/\/HPE.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/hpe-onesphere-api.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/hpe-onesphere-api-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/hpe-onesphere-api-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Developers",
+            "url": "https:\/\/developer.hpe.com\/"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/hewlettpackard"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/HPE"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/HPE.com"
+        },
+        {
+            "type": "Blog",
+            "url": "https:\/\/developer.hpe.com\/blog"
+        },
+        {
+            "type": "Curated Source",
+            "url": "http:\/\/community.hpe.com\/t5\/LoadRunner-and-Performance\/LoadRunner-and-VuGen-12-53-load-testing-software-What-s-new-in\/ba-p\/6885101"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.hpe.com"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/hewlett-packard-enterprise"
+        },
+        {
+            "type": "Email",
+            "url": "sustainability@hpe.com"
+        }
+    ]
+}
