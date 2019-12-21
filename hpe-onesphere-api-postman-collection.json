@@ -1,5 +1,5 @@
 {
-    "id": "8647163cc7010177e899d85d1d8f06f4",
+    "id": "d21c7d212fb58b3b80d617fda4a98928",
     "name": "HPE OneSphere API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "4401a6d36d44fa7ed6349d3d10a7f413",
+            "id": "040653f0c417b78d66587f68dd3c18a4",
             "name": "Get About Versions",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/about\/versions",
             "description": "Get supported versions",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "3ae13a6abe83b6232488a5548f222a36",
+            "id": "cf97828054a86fdf23565a2e521ef6a0",
             "name": "Get Account",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/account",
             "description": "Returns the global account information. **Not implemented**",
@@ -60,11 +60,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "40616ccd8c579f955781c5aa528dec2e",
+            "id": "a631ad8b6e233994fe895faef9f835c0",
             "name": "Get Appliances",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/appliances",
             "description": "Returns appliances.",
@@ -98,11 +98,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "120c71799d8a51bb500bb8d5d874838e",
+            "id": "7d83db3d4c85071a62cca4bec5275531",
             "name": "Post Appliances",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/appliances",
             "description": "Create an appliance.",
@@ -129,11 +129,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "a57a1e3645f4701ededc4bfd4e0cef1c",
+            "id": "cebb88a26a03070fb2d29be66f1b034a",
             "name": "Delete Appliances",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/appliances\/{id}",
             "description": "Delete an appliance.\nThis removes the appliance registration and tears down the secure\ncomms link to the on-premise appliance.\nIf zones exist on this appliance, an '409' error will be returned.\nThe zones on this appliance must be removed before the appliance\ndelete request can be accepted.\n",
@@ -160,11 +160,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "80fef2de335a5b27dff34c7e4079a140",
+            "id": "6d0ec7adfb36d6bd20e3ae86434bf6a3",
             "name": "Get Appliances",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/appliances\/{id}",
             "description": "Returns an appliance based on its ID.",
@@ -191,11 +191,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "cfed38bc21cddc108bf0bc2b29588a4f",
+            "id": "d1ce43c7191a6f661a5d008e19116817",
             "name": "Patch Appliances",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/appliances\/{id}",
             "description": "Update properties of an appliance.",
@@ -229,11 +229,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "082b4b04a85a225243b5e2bb634d4d4e",
+            "id": "dcb357b2b2fe4e9344b1ddf343396de3",
             "name": "Get Billing Accounts",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/billing-accounts",
             "description": "Returns billing accounts. It requires the **administrator** or **project creator** global role.",
@@ -267,11 +267,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "2b7fd68547b0dc2ee44f178fceebca89",
+            "id": "6307fd45c4fe2caf9dd6e9d6a32acd4a",
             "name": "Post Billing Accounts",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/billing-accounts",
             "description": "Creates a new billing account. It requires the **administrator** role.",
@@ -298,11 +298,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "2eefb04edefeeeeea7f105a15fe6ce90",
+            "id": "63e41dcf3b223bf0af96b38862effd7a",
             "name": "Delete Billing Accounts",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/billing-accounts\/{id}",
             "description": "Deletes a billing account. It requires the **administrator** role.",
@@ -329,11 +329,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "66cd14c2f8d45356973722a99a21bda5",
+            "id": "74171b3ede8c2e53cc225493efed6fb0",
             "name": "Get Billing Accounts",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/billing-accounts\/{id}",
             "description": "Returns a billing account based on its id. It requires the **administrator** or **project creator** global role. Credentials are not included.",
@@ -367,11 +367,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "d7739e0354da1727894b1ff0b97c2e34",
+            "id": "db39189f18062b99e47f28143891b7ed",
             "name": "Patch Billing Accounts",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/billing-accounts\/{id}",
             "description": "Updates a billing account. It requires the **administrator** role.",
@@ -405,11 +405,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "9a309e29e78ade98bdcf04b01e109ae4",
+            "id": "3dec4c9341eba499f51a671d14113f5a",
             "name": "Get Catalog Types",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalog-types",
             "description": "Returns catalog types.",
@@ -428,11 +428,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "159cd48ec9b2bd1c5d17c853424dfdbb",
+            "id": "c00a889153dead6ad48524048d576275",
             "name": "Get Catalogs",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalogs",
             "description": "Returns catalogs. It requires the **consumer** global role.",
@@ -466,11 +466,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "2a81e165244d6b08f5af7293f8a0ae12",
+            "id": "5545ee563f7134fda23dc334b918012c",
             "name": "Post Catalogs",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalogs",
             "description": "Creates a new catalog.",
@@ -497,11 +497,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "92c911e17ee1e680feafdb79aaba9571",
+            "id": "b47db3d5d07487b068d58a2713594b8e",
             "name": "Delete Catalogs",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalogs\/{id}",
             "description": "Delete a catalog and associated resources. **Not implemented**",
@@ -528,11 +528,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "a5885ea8afb94dc8c757fd6579acba07",
+            "id": "268baf2d118479758d1d7083182c18a6",
             "name": "Get Catalogs",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalogs\/{id}",
             "description": "Returns a catalog based on its id. It requires the **consumer** global role.",
@@ -566,11 +566,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "3dd6b369cf85743b0e17c0e5b8fb9818",
+            "id": "377b67f8bc1c771df8086b5a54f4b7ec",
             "name": "Patch Catalogs",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/catalogs\/{id}",
             "description": "Patches a catalog. Allowed fields for PATCH of catalogs are name(add,replace), password(add), accessKey(add), secretKey(add), state(add,replace)",
@@ -604,11 +604,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "0b92403368129ae4b2bb5eed20bf9428",
+            "id": "8d697b5ee18cc306e0c7f30926049b5d",
             "name": "Get Connect App",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/connect-app",
             "description": "Generates connect app s3 url",
@@ -635,11 +635,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "d7214b51c022444287faf99419b2f09c",
+            "id": "b1e33321ec0a9eb344693489b5cbe900",
             "name": "Get Deployments",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments",
             "description": "Returns deployments. It requires any project role or non-'consumer' global role.",
@@ -680,11 +680,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "0347432d3e0637ccb75b83c8df7deb4d",
+            "id": "5d9efdddb524fcb3b2e47db91605afdc",
             "name": "Post Deployments",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments",
             "description": "Creates a new deployment. It requires any project role, or the **administrator** or **project creator** global role.",
@@ -711,11 +711,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "49e72e6ebaf2b5856e96b3e800fc894f",
+            "id": "3669d644b534eca4eed27fd80621c539",
             "name": "Delete Deployments",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}",
             "description": "Delete a deployment and associated resources. It requires any project role, or the **administrator** or **project creator** global role.",
@@ -742,11 +742,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "a74b799f79c9a3273322f7696160dc97",
+            "id": "bd078698184ed64e1ec1f4472c1278cf",
             "name": "Get Deployments",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}",
             "description": "Returns a deployment based on its id. It requires any project role or non-'consumer' global role.",
@@ -780,11 +780,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "6ef9f7e9f84224fada99fd6ed3cca376",
+            "id": "b5c21c7ec2389175f2f37235e3c13741",
             "name": "Patch Deployments",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}",
             "description": "Updates a deployment. **Requires any project role, or 'administrator' or 'project creator' global role**. Allowed fields for PATCH of deployments are name(add,replace), volumes(add), k8snumWorkers(add), userData(add), serviceInput(add), version(add).",
@@ -818,11 +818,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "fa38f230b88d980e0da76d0d00861814",
+            "id": "70ef8e93edb0e725b691bc81ec7998d2",
             "name": "Post Deployments Actions",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}\/actions",
             "description": "Peforms an action to change the state of a deployment. It requires any project role, or the **administrator** or **project creator** global role.",
@@ -856,11 +856,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "27c3e2422e0f0cc563b0c44839faff85",
+            "id": "2069d246a62fb4b40ab8eea5345f736b",
             "name": "Post Deployments Console",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}\/console",
             "description": "Returns a deployment console URL for deployment",
@@ -887,11 +887,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "67c62aa774b0654a81fc2c317512b8f3",
+            "id": "334ba98d1b29fc3aba1c1a50c313deb2",
             "name": "Get Deployments Kubeconfig",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/deployments\/{id}\/kubeconfig",
             "description": "Returns the kubeconfig. Applicable only to deployments of Kubernetes cluster. **Requires 'consumer' role on workspace**",
@@ -918,11 +918,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "8c8fbf7e7ce40d4e83ab69ed3c8d3925",
+            "id": "aabb33185f442cd154bef985dab82cd6",
             "name": "Get Events",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/events",
             "description": "Returns events based on the supplied criteria. **Not implemented**",
@@ -949,11 +949,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "03ed32e02eb9731618e7406a3ea96e7c",
+            "id": "c435cf5080eb88d3aaff666a35cedd68",
             "name": "Get Keypairs",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/keypairs",
             "description": "Get keypairs (per region, per user). Currently a projectUri is required",
@@ -987,11 +987,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "02d55c3b7111e2d3b990765118302d1d",
+            "id": "2874c932308340f761d6abd71362f562",
             "name": "Get Membership Roles",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/membership-roles",
             "description": "Returns membership (project-specific) roles.",
@@ -1010,11 +1010,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "0cc91c81c86f3712d7b5df9ffd2d310b",
+            "id": "891c7e37ee0448ccd9ffbd65d7d65d30",
             "name": "Delete Memberships",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/memberships",
             "description": "Delete a membership. It requires the **administrator** or **project creator** global role or the **project owner** role on the project.",
@@ -1041,11 +1041,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "c87f65733f07b7f25fe3ccf7383e23a7",
+            "id": "2e447c4dca5f3f444b132fa383d7356b",
             "name": "Get Memberships",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/memberships",
             "description": "Returns memberships. Supports filtering by projectUri, userUri, userGroupUri, roleUri (but only\nindividual values, not multiple) in 'query'.\n\nIf projectURI and userUri\/userGroupUri are given a different\nbackend path will be used that should be authorized to a project owner even if they wouldn't ordinarily\nbe able to see other users' roles.\n\nIt requires the **administrator** or **project creator** global role or the **project owner** role on the project.\n**project owner** requires **projectUri** ",
@@ -1072,11 +1072,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "51e6406ae8c79d971efd7aeaac0c4fac",
+            "id": "d2b224ab43326d4120bb17c056b1dd3f",
             "name": "Post Memberships",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/memberships",
             "description": "Creates a new membership. It requires the **administrator** or **project creator** global role or **project owner** role on the project.",
@@ -1103,11 +1103,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "8ccd2febbcd8d3f6be19a2b435871de1",
+            "id": "21e174ce615a67f5a3eeb51e4e789f39",
             "name": "Get Metrics",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/metrics",
             "description": "Returns all metrics based on the supplied criteria. It requires the **analyst** role.\nIt requires one and only one of resourceUri or category to be specified.\n",
@@ -1204,11 +1204,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "ceac08bd9cd2d5722d31211061732f7f",
+            "id": "f7b3fcbd22dcfdc4582cc35d7a461fbb",
             "name": "Get Networks",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/networks",
             "description": "Returns networks. It requires any project role or non-'consumer' global role.",
@@ -1235,11 +1235,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "25253c83b4f1d475605fae129ffd3b83",
+            "id": "157a5154df1222c56703080f856689c8",
             "name": "Get Networks",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/networks\/{id}",
             "description": "Returns a network based on its id. It requires any project role or non-'consumer' global role.",
@@ -1273,11 +1273,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "02c5c2089c86e54c2f1caf4fb06fdd19",
+            "id": "241fae0aa89ecff444330ac4f6eaa789",
             "name": "Patch Networks",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/networks\/{id}",
             "description": "Updates a network. It requires the **administrator** global role.",
@@ -1311,11 +1311,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "8da9fc3fe59e7e2b791f40a420a57e76",
+            "id": "68fdee5c2367846c8640d2142c1f8f86",
             "name": "Get Onboarding Azure Properties",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/onboarding\/azure\/properties",
             "description": "Returns a properties object needed to build the Azure login url",
@@ -1334,11 +1334,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "fab629f7f53d6de04ed969a01c09be45",
+            "id": "b7ee76548207265ebd6681a601627c7a",
             "name": "Get Onboarding Azure Prover Info",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/onboarding\/azure\/provider-info",
             "description": "Returns the provider information required to add an Azure provider",
@@ -1372,11 +1372,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "a425dfbfc7a61c18134d7f67a8f83f8b",
+            "id": "46392d5bd8ecf5463dd915a728321ed6",
             "name": "Get Onboarding Azure Subscriptions",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/onboarding\/azure\/subscriptions",
             "description": "Returns a list of Azure subscriptions and their display names",
@@ -1410,11 +1410,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "57a570050e230cb0b3fe9214fa94d9d0",
+            "id": "e4321a13fa0aeb95ec266612c6338f95",
             "name": "Patch Onboarding Azure Subscriptions Subscriptionid",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/onboarding\/azure\/subscriptions\/{subscriptionId}",
             "description": "Updates a subscription",
@@ -1462,11 +1462,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "3dfcd87f84395f5bd0a9393b68962de4",
+            "id": "2925d61371e842040a3875c048995ebf",
             "name": "Post Password Reset",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/password-reset",
             "description": "Request a single-use password reset token.",
@@ -1493,11 +1493,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "bebd295e85b5c019944f7b1a21cfc2be",
+            "id": "4472b7a1d25dec3a08d9085c13eafeb3",
             "name": "Post Password Reset Change",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/password-reset\/change",
             "description": "Process a password reset.",
@@ -1524,11 +1524,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "918057c7529528306309b1743c2fefae",
+            "id": "505a3bd70e8b907d64c4bebd9d097837",
             "name": "Get Projects",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/projects",
             "description": "Returns projects. It requires any project role or non-'consumer' global role.",
@@ -1562,11 +1562,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "dfd476046110757e8a89a6596403a533",
+            "id": "45b93bd2eb294087603cec4aef6df907",
             "name": "Post Projects",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/projects",
             "description": "Creates a new project. It requires the **project-owner** project role, or **administrator** or **project creator** global role.",
@@ -1593,11 +1593,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "ec84750e722d48c3745bb7b5ccfb9348",
+            "id": "1636c1677a74a40d57c5b7f094d335a0",
             "name": "Delete Projects",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/projects\/{id}",
             "description": "Deletes a project. If resources (currently Deployments) exist within the project they must first be deleted. In this case, the response will be a 409 Conflict with the body listing the first ten offending items. It requires **administratpor** global role or **owner** project role. **not implemented**\n",
@@ -1624,11 +1624,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "ce1b036f4504a5cc536347bfdd29e580",
+            "id": "23e8a603b4d404b0518f9a5256d62b90",
             "name": "Get Projects",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/projects\/{id}",
             "description": "Returns a project based on its id. It requires any project role or non-consumer global role.",
@@ -1662,11 +1662,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "1865894afc542f6afbf033e12e304fa3",
+            "id": "32b9fdef0a2ecfd8904090857c2c1825",
             "name": "Patch Projects",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/projects\/{id}",
             "description": "Updates a project. It requires the **administrator** global role or the **project owner** role on a project.",
@@ -1700,11 +1700,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "a88daedefddf092e42e7eb9d5bd7c070",
+            "id": "774b571283be4c9f3a8059c08c81ef7f",
             "name": "Get Prover Types",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/provider-types",
             "description": "Returns provider types.",
@@ -1723,11 +1723,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "79b1f1e97d079b4e32018318fe296000",
+            "id": "3a23e4f3084ca7e6a3a46ccaac633722",
             "name": "Get Provers",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/providers",
             "description": "Returns providers. It requires the **consumer** global role.",
@@ -1754,11 +1754,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "95450ac08bee9771e35357fd9edde7d4",
+            "id": "0d45b02361c6059a0c4b5810d20aee98",
             "name": "Post Provers",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/providers",
             "description": "Creates a new Master provider or Member provider.",
@@ -1785,11 +1785,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "d4c75f5fdba19c920be1f57b40058a3a",
+            "id": "6e68a2fcbe4bebe2df430485bc6ea8d5",
             "name": "Delete Provers",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/providers\/{id}",
             "description": "Deletes a master provider or a child provider",
@@ -1816,11 +1816,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "c6dfca73f0674740cf12f7b768c483ab",
+            "id": "d10f2f8f076b8e7bdfbe5c98866a7051",
             "name": "Get Provers",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/providers\/{id}",
             "description": "Returns a provider based on its id. It requires the **consumer** global role.",
@@ -1861,11 +1861,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "92a9df01a2c0279e249274b6857bf1ac",
+            "id": "b0087ebd2586dd87d5530753f8eef8a4",
             "name": "Patch Provers",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/providers\/{id}",
             "description": "Updates a provider.",
@@ -1899,11 +1899,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "c2255d94c47d855586824485eac3bdb5",
+            "id": "980419cb233f973160f53214198a308c",
             "name": "Get Rates",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/rates",
             "description": "Returns rates. It requires the **administrator** global role.\n\nOptionally this list may be filtered, or the default rates specified with a resourceUri of 'default'.\n",
@@ -1972,11 +1972,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "21ccc97ff872c1d5752fa5bb2f30766e",
+            "id": "627bb819eef0c294c844c0e9c7aebe82",
             "name": "Get Rates",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/rates\/{id}",
             "description": "Retrieve a rate by id. It requires the **administrator** global role.",
@@ -2003,11 +2003,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "68f4f579001d6c12bb321aebf0c00b6b",
+            "id": "b28351ad7eb2669a569641da36d5fc6c",
             "name": "Get Regions",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions",
             "description": "Returns regions. It requires the **consumer** global role.",
@@ -2041,11 +2041,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "5613ba6cea020b155223ec9f561a65d1",
+            "id": "f6ef33c8401ef958727d3ad01d20108d",
             "name": "Post Regions",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions",
             "description": "Creates a new region.",
@@ -2072,11 +2072,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "f080cf1f33d5b35740b68298d8c0e6b3",
+            "id": "bed91b3029441b6d8fe2f5407d3f8bc0",
             "name": "Delete Regions",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}",
             "description": "Deletes a region",
@@ -2110,11 +2110,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "e29db44ba5eff2bea159073f286f0902",
+            "id": "7eb0ab41fcea1f9e46a2a9dca3e6bbd4",
             "name": "Get Regions",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}",
             "description": "Returns a region based on its id. It requires the **consumer** global role.",
@@ -2155,11 +2155,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "db173b6485ee4b53af4452fb5d0f8561",
+            "id": "96ee51ec774486fbd98f13b639707e76",
             "name": "Patch Regions",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}",
             "description": "Patches a region. PATCH only supports provider type(\/rest\/provider-types\/ncs). Allowed fields to PATCH for NCS provider type are (name,location)",
@@ -2193,11 +2193,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "91b563522337243213ba6159b9a6bdcb",
+            "id": "1a65bba80420ff48d353ba9e40bcf7ae",
             "name": "Put Regions",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}",
             "description": "Updates a region. **Not implemented**",
@@ -2231,11 +2231,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "12e6b030e1cc71935ebc166ea0d5e71a",
+            "id": "b177adbace7cb975e7f8855f07aa8834",
             "name": "Delete Regions Connection",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}\/connection",
             "description": "",
@@ -2262,11 +2262,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "d740e1deab48ee2c5ed5c299ceecab5b",
+            "id": "4bd14d6fd2cbd5cad60a2c706c26e191",
             "name": "Get Regions Connection",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}\/connection",
             "description": "Get region connection.",
@@ -2293,11 +2293,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "6343426d47ac4979813a298fe5203654",
+            "id": "9d0f29c3d27b1831adb398f5fd008b70",
             "name": "Post Regions Connection",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}\/connection",
             "description": "Creates a new region connection",
@@ -2331,11 +2331,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "44547af772fbf74f9ca1364b9b4b84f9",
+            "id": "8547296a14aa46b3921c7cdec6cd4c42",
             "name": "Get Regions Connector Image",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/regions\/{id}\/connector-image",
             "description": "Generates connector-image url for the region. It requires the **administrator** role.",
@@ -2362,11 +2362,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "83d3c7503da19843d39aae5e214ef062",
+            "id": "ca04d539d5ea7fc8e9ee42e55437af72",
             "name": "Get Roles",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/roles",
             "description": "Returns global roles.",
@@ -2385,11 +2385,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "6206991f29e2f68db8012cb5212ddffe",
+            "id": "900c05fa6f511de614448445f0f4e357",
             "name": "Get Servers",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/servers",
             "description": "Returns servers.",
@@ -2430,11 +2430,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "1a0e7fce052666a7e240425c41791756",
+            "id": "b3d26e8514a44137a844c3443c07bd95",
             "name": "Post Servers",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/servers",
             "description": "Create\/Register a server.",
@@ -2461,11 +2461,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "99a50582044050fa7e811dfd0618797c",
+            "id": "9384ca515020061c8b9d5e76a1e4be59",
             "name": "Delete Servers",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/servers\/{id}",
             "description": "Delete a server.\nNote that by default only servers created via the HPE OneSphere API can be\nsubsequently deleted. HPE OneSphere managed servers (those that have\nan applianceUri) cannot be deleted via this operation (a '403' will be returned),\nunless the 'force' parameter is supplied and set to 'true'.\n",
@@ -2499,11 +2499,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "75ef521ab9a8b3e5afbab1eb022f1452",
+            "id": "d1ebe0a7dd1d591dee9b8d06cbdb16d9",
             "name": "Get Servers",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/servers\/{id}",
             "description": "Returns a server based on its ID.",
@@ -2530,11 +2530,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "80e1cf49e624e10ef2de6d918c6665b7",
+            "id": "c372f28a033ecaa53b7c255444bb040c",
             "name": "Patch Servers",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/servers\/{id}",
             "description": "Update properties of a server.",
@@ -2568,11 +2568,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "974feea2cb8b14c2f3d48b00b402d252",
+            "id": "b3df10791314c7fb134e4acad9547bda",
             "name": "Get Service Types",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/service-types",
             "description": "Returns all service types. It requires the **consumer** global role.",
@@ -2591,11 +2591,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "1e1b8078dfe043bc156de9081abe8a22",
+            "id": "2e8743a67279032bf85934ce4ed85883",
             "name": "Get Service Types",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/service-types\/{id}",
             "description": "Return a service type based on its id. It requires the **consumer** global role.",
@@ -2622,11 +2622,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "2fd4f375a71af6d8d011d448a382a069",
+            "id": "1f0fdf668e7bc0e3ada437e4ace3d32c",
             "name": "Get Services",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/services",
             "description": "Returns services. It requires any project role or non-'consumer' global role.",
@@ -2667,11 +2667,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "18784e71db861eee54ccbb6a828d855d",
+            "id": "2643ccefeb731b12e54ab664b9931961",
             "name": "Get Services",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/services\/{id}",
             "description": "Returns a service based on its id. It requires any project role or non-'consumer' global role.",
@@ -2705,11 +2705,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "10821bde4b09ee30560e23b272d2d620",
+            "id": "cf3382080c501f0916890cc31de0a714",
             "name": "Delete Session",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session",
             "description": "Deletes cached data and tokens for the current session.",
@@ -2728,11 +2728,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "e67abebce68d46c48978c7a392cabd0c",
+            "id": "09662297522ff455b49e26e43477feeb",
             "name": "Get Session",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session",
             "description": "Gets information for the current user.",
@@ -2759,11 +2759,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "cc7f64294657fcca1ea4f07fcba25d9a",
+            "id": "c5acf0fa4d5ac2b8ae4d2b1be5048f3f",
             "name": "Post Session",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session",
             "description": "Authenticates a local user and generates an authorization token. This\ntoken should be used in subsequent HTTP requests as part of\nthe \"Authorization\" header. For example:\n\n`Authorization: \"Bearer <token>\"`\n",
@@ -2790,11 +2790,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "2d1175740f4a651a5a0d8f0ad8fb2716",
+            "id": "933e4f694926052c4bf19c3aaa0200f7",
             "name": "Get Session P",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session\/idp",
             "description": "**Not implemented**\n\nGets the Identity Provider login URL for a userName.\n",
@@ -2821,11 +2821,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "1bd9949b88ed37f8a42cee0f619e5c9c",
+            "id": "d3a52c943a3eb1b403f599014a54f3bf",
             "name": "Get Session Sso",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session\/sso",
             "description": "Get the redirect URL for a configured SSO provider",
@@ -2844,11 +2844,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "f3b7ac17d7f899a675350b06f3ca3cda",
+            "id": "8c935aa6c147589167858092276e9c02",
             "name": "Post Session Sso",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/session\/sso",
             "description": "Callback for SSO login",
@@ -2875,11 +2875,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "5cfe770a730690721a0588ea5dd20c7f",
+            "id": "7a819da356b2a38c76393a7b1867709c",
             "name": "Get Status",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/status",
             "description": "Checks the service is running. It does not require authorization.",
@@ -2898,11 +2898,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "2462ca394b7ed732f6dd404f860fddc4",
+            "id": "56ca115310f3a320f834b554bc458bc1",
             "name": "Get Tag Keys",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tag-keys",
             "description": "Lists tag keys.",
@@ -2929,11 +2929,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "4ff866ea4d565856bdd4b1222561b8cb",
+            "id": "0e7b0410b5b48ebe28fab5fdede3eaa1",
             "name": "Post Tag Keys",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tag-keys",
             "description": "Create a tag key. It requires the **analyst** global role.",
@@ -2960,11 +2960,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "665ccb4bc9fba6ff84099876b3f70db2",
+            "id": "aec6dcc07d9ba2cd1998dc566b0d1e10",
             "name": "Delete Tag Keys",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tag-keys\/{id}",
             "description": "Delete a tag key and associated tags. It requires the **analyst** global role.",
@@ -2991,11 +2991,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "69d1d94a4b664ae667561d27d90dcebc",
+            "id": "e197eb0f320706bc331408b2ba5a0131",
             "name": "Get Tag Keys",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tag-keys\/{id}",
             "description": "Returns a tag key based on its id.",
@@ -3029,11 +3029,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "f4208ef9fdb61d93dbc6c787ac1ff0d6",
+            "id": "ecd71e75c2bb3076744f0a0894cc7440",
             "name": "Get Tags",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tags",
             "description": "Lists tags.",
@@ -3060,11 +3060,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "5f94ba13a3e8e372c6910124c4fb7c66",
+            "id": "20975215523e60c8aa5aee26ebee92b9",
             "name": "Post Tags",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tags",
             "description": "Create a tag. It requires the **analyst** global role.",
@@ -3091,11 +3091,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "85971caff152ff6f3937d4776c8dbca1",
+            "id": "fe41c8c58d7201613a1b31993f8331c1",
             "name": "Delete Tags",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tags\/{id}",
             "description": "Delete a tag. It requires the **analyst** global role.",
@@ -3122,11 +3122,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "9bc3c70b369ca31a7b09365d37a4b7f2",
+            "id": "99e4c1853b8db86227ca2f5420c25857",
             "name": "Get Tags",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/tags\/{id}",
             "description": "Returns a tag based on its id. It requires the **consumer** global role.",
@@ -3160,11 +3160,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "ef4d41ad5efd5d19b610b9b65b2c7bcc",
+            "id": "ee8dde8e4e4e2248049253bd3b750b8c",
             "name": "Get Users",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/users",
             "description": "Returns users.",
@@ -3191,11 +3191,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "4dacae98489d154a26f391954bbcb3f0",
+            "id": "f5db5289fbf17fee04aa2b50fd0391a3",
             "name": "Post Users",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/users",
             "description": "Create a user. It requires the **administrator** or **project creator** global role.\n\nThe password should be a minimum of 8 characters long.\n",
@@ -3222,11 +3222,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "906de24efa1c952b9d13aa3e8fcb7d7c",
+            "id": "ecff9afe60f3fee3dcad7e0d94dcdfda",
             "name": "Delete Users",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/users\/{id}",
             "description": "Delete a user. It requires the **administrator** or **project creator** global role.",
@@ -3253,11 +3253,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "ebf643734c578d06820a1874c92834e4",
+            "id": "c898cd4af115d7cf5121256922d0fbe5",
             "name": "Get Users",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/users\/{id}",
             "description": "Returns a user based on its id. It requires the **administrator** or **project creator** global role, or matching user id.",
@@ -3284,11 +3284,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "ed987826becf48f20c484d981df0f1d1",
+            "id": "5efe9838293fb455df1f6ceeaf12f886",
             "name": "Patch Users",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/users\/{id}",
             "description": "Update a user. It requires the **administrator** or **project creator** global role or matching user ID.\n\nIf the password is updated it must be a minimum of 8 characters long.\n",
@@ -3322,11 +3322,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "5b3d020566608b098aabc632765e4bdb",
+            "id": "ce317c22e4c6a7131f58459e08367476",
             "name": "Get Virtual Machine Profiles",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/virtual-machine-profiles",
             "description": "Returns all virtual machine profiles. It requires any project role or non-'consumer' global role.",
@@ -3360,11 +3360,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "f05a2a6f6a4dab248028b059af187c38",
+            "id": "28d2d73e5b900a44339d52141c45a807",
             "name": "Get Virtual Machine Profiles",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/virtual-machine-profiles\/{id}",
             "description": "Returns a virtual machine profile based on its id. It equires any project role or non-'consumer' global role.",
@@ -3391,11 +3391,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "94dc2349bf8e01160f234b63bf27111f",
+            "id": "be82928ae082332ba20df82742e0a3f4",
             "name": "Get Volumes",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/volumes",
             "description": "Returns volumes. It requires any project role or non-'consumer' global role.",
@@ -3429,11 +3429,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "cf7624f541f6724d529d375c9dabef1a",
+            "id": "f13721e551a1d7285c2e24743225e2e8",
             "name": "Post Volumes",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/volumes",
             "description": "Creates a new volume. It requires any project role or the **administrator** or **project creator** global role.",
@@ -3460,11 +3460,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "75cc9281c1697399b4c7ae1a95f2654f",
+            "id": "196e9cf213db2c77bfa100e57f6c71d7",
             "name": "Delete Volumes",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/volumes\/{id}",
             "description": "Delete a volume. It requires any project role or the **administrator** or **project creator** global role.",
@@ -3491,11 +3491,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "c54196593856bb6cfd81131cb5a026aa",
+            "id": "80bdeda2d3ac030fd8c6246f4b5e68d3",
             "name": "Get Volumes",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/volumes\/{id}",
             "description": "Returns a volume based on its id. It requires any project role or non-'consumer' global role.",
@@ -3522,11 +3522,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "124bb8d526dfed8f370b25b889c4b816",
+            "id": "7269ce84d5735d06e3721c08fc205929",
             "name": "Patch Volumes",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/volumes\/{id}",
             "description": "Updates a volume. **Requires any project role or 'administrator' or 'project creator' global role**. Allowed fields for PATCH of volumes are name(add,replace), size(add,replace)",
@@ -3560,11 +3560,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "ad4b68e2f314b1a2a746724020228405",
+            "id": "358b9d008a57ce9ad6ae32bef057c6e2",
             "name": "Get Zone Types",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zone-types",
             "description": "Returns all zone types.",
@@ -3583,11 +3583,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "15a10b2e144323c1261964b1fbce4e98",
+            "id": "69532b5fa7f0fdbdeee32b43183e6431",
             "name": "Get Zone Types Resource Profiles",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zone-types\/{id}\/resource-profiles",
             "description": "Returns all available resourceProfile for **vcenter zone type**. It requires the **administrator** role.",
@@ -3614,11 +3614,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "6ba1d594c1c14475592f3490edee9c91",
+            "id": "58bb97124673a78068083f14d91a9fea",
             "name": "Get Zones",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones",
             "description": "Returns zones.",
@@ -3673,11 +3673,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "d4050c0841929759b92f860f0f24a047",
+            "id": "6e52db40bc06dadb6d24e501465ec71d",
             "name": "Post Zones",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones",
             "description": "Creates a new zone",
@@ -3704,11 +3704,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "6a3da205da39eb03360175189ccb7205",
+            "id": "61851bbdca64a30412ab3b4d37c1fc3f",
             "name": "Delete Zones",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}",
             "description": "Deletes a zone",
@@ -3742,11 +3742,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "43de3ec2c1c1e46563d0f2cfa0a8b9d5",
+            "id": "f29e5d80b347bb118364262b204047bf",
             "name": "Get Zones",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}",
             "description": "Returns a zone based on its id.",
@@ -3780,11 +3780,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "4a73ac5cd49aea441c7659c8457e0677",
+            "id": "f1d9c08fce0cee344366f2cb521d84dc",
             "name": "Patch Zones",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}",
             "description": "Updates a zone",
@@ -3818,11 +3818,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "ead02713c0d3715fe6f71a29f06ae158",
+            "id": "1d5c36e95a7b22a5698ca74853357cc7",
             "name": "Post Zones Actions",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/actions",
             "description": "Peforms an action to the zone. It requires the **administrator** role.",
@@ -3856,11 +3856,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "414eebfdfdf21f6da207bd492b23cebc",
+            "id": "b86c3f8dc5447e7eb53c5d3b4bb4b87f",
             "name": "Get Zones Appliance Image",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/appliance-image",
             "description": "Generates appliance-image url for the zone",
@@ -3887,11 +3887,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "4c41c3dc41add0a995c762afe648020c",
+            "id": "e5061cd034d962e06f6d01f4b8e0d3b3",
             "name": "Get Zones Connections",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/connections",
             "description": "Gets the list of connection for the zone. It requires the **administrator** role.",
@@ -3925,11 +3925,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "5b292955a841e08ece7f5be308ca9da9",
+            "id": "ebb7bbef5058fe095fcb85de4450eb8b",
             "name": "Post Zones Connections",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/connections",
             "description": "Peforms an action to the zone. It requires the **administrator** role.",
@@ -3963,11 +3963,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "c2ee954fd98a26f3f8d04959310b1cc6",
+            "id": "d838226c74b321ae6f1d4a3cebbc3d98",
             "name": "Delete Zones Connections Uu",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/connections\/{uuid}",
             "description": "Deletes a connection instance of the zone",
@@ -4001,11 +4001,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "ff39623c5c98ea324c65eec9a4f0a43f",
+            "id": "7cc9263c3ab59744c3e5ae0bd5ff391b",
             "name": "Patch Zones Connections Uu",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/connections\/{uuid}",
             "description": "Updates a connection of the zone.",
@@ -4046,11 +4046,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         },
         {
-            "id": "2ba8b087471438924c4f47b8e951cb85",
+            "id": "4d6723548666846402248be4493f2d98",
             "name": "Get Zones Task Status",
             "url": "httpsdeic02-hpe.hpeonesphere.com\/rest\/zones\/{id}\/task-status",
             "description": "Returns the status of the task for the zone",
@@ -4077,7 +4077,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8647163cc7010177e899d85d1d8f06f4",
+            "collectionId": "d21c7d212fb58b3b80d617fda4a98928",
             "rawModeData": ""
         }
     ]
